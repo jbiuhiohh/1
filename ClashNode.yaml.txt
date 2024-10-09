@@ -455,11 +455,10 @@ rule-providers:
     interval: 3600
     path: "./Clash/SteamCN.list"
 rules:
-- "SRC-IP-CIDR,66.254.114.41/443, 🚀 节点选择"
-- "DOMAIN,rt.pornhub.com,🌍 国外媒体"
-- "DOMAIN-KEYWORD,porn,🌍 国外媒体"
-- "DOMAIN-SUFFIX,pornhub.com,🌍 国外媒体"
-- "DOMAIN-SUFFIX,rt.pornhub.com,🌍 国外媒体"
+- "DOMAIN,rt.pornhub.com,🚀 节点选择"
+- "DOMAIN-KEYWORD,porn,🚀 节点选择"
+- "DOMAIN-SUFFIX,pornhub.com,🚀 节点选择"
+- "DOMAIN-SUFFIX,rt.pornhub.com,🚀 节点选择"
 - "RULE-SET,ProxyMedia,🌍 国外媒体"
 - "RULE-SET,Telegram,📲 电报信息"
 - "RULE-SET,ProxyLite,🚀 节点选择"
