@@ -455,6 +455,10 @@ rule-providers:
     interval: 3600
     path: "./Clash/SteamCN.list"
 rules:
+- "DOMAIN,rt.pornhub.com,🌍 国外媒体"
+- "DOMAIN-KEYWORD,porn,🌍 国外媒体"
+- "DOMAIN-SUFFIX,pornhub.com,🌍 国外媒体"
+- "DOMAIN-SUFFIX,rt.pornhub.com,🌍 国外媒体"
 - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
 - "RULE-SET,BanAD,🛑 全球拦截"
 - "RULE-SET,BanProgramAD,🍃 应用净化"
@@ -464,7 +468,6 @@ rules:
 - "RULE-SET,Apple,🍎 苹果服务"
 - "RULE-SET,ProxyMedia,🌍 国外媒体"
 - "RULE-SET,Telegram,📲 电报信息"
-- "DOMAIN-SUFFIX,rt.pornhub.com,🌍 国外媒体"
 - "RULE-SET,ProxyLite,🚀 节点选择"
 - "RULE-SET,ChinaDomain,🎯 全球直连"
 - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
