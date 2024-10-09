@@ -464,6 +464,7 @@ rules:
 - "RULE-SET,Apple,🍎 苹果服务"
 - "RULE-SET,ProxyMedia,🌍 国外媒体"
 - "RULE-SET,Telegram,📲 电报信息"
+- "DOMAIN-SUFFIX,pornhub.com,🚀 节点选择"
 - "RULE-SET,ProxyLite,🚀 节点选择"
 - "RULE-SET,ChinaDomain,🎯 全球直连"
 - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
