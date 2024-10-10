@@ -455,6 +455,13 @@ rule-providers:
     interval: 3600
     path: "./Clash/SteamCN.list"
 rules:
+- "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+- "RULE-SET,BanAD,🛑 全球拦截"
+- "RULE-SET,BanProgramAD,🍃 应用净化"
+- "RULE-SET,GoogleCN,🎯 全球直连"
+- "RULE-SET,SteamCN,🎯 全球直连"
+- "RULE-SET,Microsoft,Ⓜ️ 微软服务"
+- "RULE-SET,Apple,🍎 苹果服务"
 - "RULE-SET,ProxyMedia,🌍 国外媒体"
 - "RULE-SET,Telegram,📲 电报信息"
 - "RULE-SET,ProxyLite,🚀 节点选择"
