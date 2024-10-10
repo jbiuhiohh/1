@@ -107,8 +107,8 @@ rule-providers:
     interval: 3600
     path: "./Clash/ProxyMedia.list"
 rules:
-- "RULE-SET,ProxyMedia,🌍 Foreign Media"
-- "RULE-SET,ProxyLite,🚀Node Selection"
+- "RULE-SET,ProxyMedia,🇨🇦_CA_Canada_1"
+- "RULE-SET,ProxyLite, 🇨🇦_CA_Canada_1"
 - "MATCH,🐟 The fish that slipped through the net"
   
  
