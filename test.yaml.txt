@@ -7,6 +7,10 @@ allow-lan: false
 mode: "rule"
 log-level: "info"
 external-controller: "127.0.0.1:9999"
+clash-for-android:
+  append-system-dns: false
+hosts:
+  mtalk.google.com: 108.177.125.188
 dns:
   enable: true
   listen: "0.0.0.0:53"
@@ -100,7 +104,6 @@ rule-providers:
     interval: 3600
     path: "./Clash/ProxyMedia.list"
 rules:
-- "SRC-IP-CIDR,66.254.114.41/443,🇨🇦_CA_Canada_1"
 - "RULE-SET,ProxyMedia,🇨🇦_CA_Canada_1"
 - "MATCH,🐟 The fish that slipped through the net"
   
