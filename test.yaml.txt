@@ -95,18 +95,13 @@ proxy-groups:
   - "♻️ Auto Select"
   - "🇨🇦_CA_Canada"
   - "🇨🇦_CA_Canada_1"
-rule-providers:
-  ProxyMedia:
-    type: "http"
-    behavior: "classical"
-    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyMedia.list"
-    format: "text"
-    interval: 3600
-    path: "./Clash/ProxyMedia.list"
 rules:
-- "RULE-SET,ProxyMedia,🇨🇦_CA_Canada_1"
+- DOMAIN-SUFFIX,phncdn.com,🇨🇦_CA_Canada_1
+- DOMAIN-SUFFIX,phprcdn.com,🇨🇦_CA_Canada_1
+- DOMAIN-SUFFIX,pornhub.com,🇨🇦_CA_Canada_1
+- DOMAIN-SUFFIX,pornhubpremium.com,🇨🇦_CA_Canada_1
+- IP-CIDR,66.254.114.41/443,no-resolve,🇨🇦_CA_Canada_1,no-resolve
 - "MATCH,🐟 The fish that slipped through the net"
-  
  
 
 
