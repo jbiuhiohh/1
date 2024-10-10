@@ -455,10 +455,6 @@ rule-providers:
     interval: 3600
     path: "./Clash/SteamCN.list"
 rules:
-- "DOMAIN,rt.pornhub.com,🚀 节点选择"
-- "DOMAIN-KEYWORD,porn,🚀 节点选择"
-- "DOMAIN-SUFFIX,pornhub.com,🚀 节点选择"
-- "DOMAIN-SUFFIX,rt.pornhub.com,🚀 节点选择"
 - "RULE-SET,ProxyMedia,🌍 国外媒体"
 - "RULE-SET,Telegram,📲 电报信息"
 - "RULE-SET,ProxyLite,🚀 节点选择"
