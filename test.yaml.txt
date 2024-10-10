@@ -82,19 +82,12 @@ proxy-groups:
   proxies:
   - "🚀Node Selection"
   - "♻️ Auto Select"
-  - "🎯 Global Direct Connection"
   - "🇨🇦_CA_Canada"
   - "🇨🇦_CA_Canada_1"
-- name: "🎯 Global Direct Connection"
-  type: "select"
-  proxies:
-  - "DIRECT"
-  - "🚀Node Selection"
 - name: "🐟 The fish that slipped through the net"
   type: "select"
   proxies:
   - "🚀Node Selection"
-  - "🎯 Global Direct Connection"
   - "♻️ Auto Select"
   - "🇨🇦_CA_Canada"
   - "🇨🇦_CA_Canada_1"
@@ -114,10 +107,8 @@ rule-providers:
     interval: 3600
     path: "./Clash/ProxyMedia.list"
 rules:
-- "RULE-SET, LocalAreaNetwork, 🎯 Global Direct Connection"
 - "RULE-SET,ProxyMedia,🌍 Foreign Media"
 - "RULE-SET,ProxyLite,🚀Node Selection"
-- "GEOIP,CN,🎯 Global Direct Connection"
 - "MATCH,🐟 The fish that slipped through the net"
   
  
