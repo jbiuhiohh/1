@@ -100,7 +100,6 @@ rules:
 - DOMAIN-SUFFIX,phprcdn.com,🇨🇦_CA_Canada_1
 - DOMAIN-SUFFIX,pornhub.com,🇨🇦_CA_Canada_1
 - DOMAIN-SUFFIX,pornhubpremium.com,🇨🇦_CA_Canada_1
-- IP-CIDR,66.254.114.41/443,no-resolve,🇨🇦_CA_Canada_1,no-resolve
 - "MATCH,🐟 The fish that slipped through the net"
  
 
