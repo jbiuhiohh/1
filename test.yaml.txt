@@ -92,22 +92,14 @@ proxy-groups:
   - "🇨🇦_CA_Canada"
   - "🇨🇦_CA_Canada_1"
 rule-providers:
-  ProxyLite:
-    type: "http"
-    behavior: "classical"
-    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
-    format: "text"
-    interval: 3600
-    path: "./Clash/ProxyLite.list"
   ProxyMedia:
     type: "http"
     behavior: "classical"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyMedia.list"
     format: "text"
     interval: 3600
     path: "./Clash/ProxyMedia.list"
 rules:
-- "RULE-SET,ProxyLite, 🇨🇦_CA_Canada_1"
 - "RULE-SET,ProxyMedia,🇨🇦_CA_Canada_1"
 - "MATCH,🐟 The fish that slipped through the net"
   
