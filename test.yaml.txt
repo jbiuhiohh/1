@@ -54,7 +54,7 @@ proxies:
   port: 80
   cipher: "chacha20-ietf-poly1305"
   password: "JIhN6rBKkaEboLNXVSv5rq"
-- name: "🇨🇦_CA_加拿大_1"
+- name: "🇨🇦_CA_Canada_1"
   type: "ss"
   server: "23.154.136.176"
   port: 8118
