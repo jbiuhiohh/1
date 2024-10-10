@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
+IP-CIDR,66.254.114.41/443,no-resolve
 
 # NAME: LinkedIn
 # AUTHOR: blackmatrix7
