@@ -134,7 +134,7 @@ rule-providers:
   ProxyLite:
     type: "http"
     behavior: "classical"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
     format: "text"
     interval: 3600
     path: "./Clash/ProxyLite.list"
