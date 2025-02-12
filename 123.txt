@@ -48,7 +48,7 @@ tun:
   - "1.1.1.1" 
   - "1.0.0.1" 
 proxies: 
-- name: "🇨🇦_CA_加拿大_" 
+- name: "🇨🇦_CA_Canada" 
   type: "ss" 
   server: "142.4.216.225" 
   port: 80 
@@ -67,7 +67,7 @@ proxy-groups:
   - "🚀 Node Selection" 
   - "♻️ Automatic Selection" 
   - "🎯 Global Direct Connection" 
-  - "🇨🇦_CA_Canada " 
+  - "🇨🇦_CA_Canada" 
 - name: "📲 Telegram message" 
   type: "select" 
   proxies: 
@@ -85,7 +85,7 @@ proxy-groups:
   proxies: 
   - "🚀 Node Selection" 
   - "🎯 Global Direct Connection" 
-  - "🇨🇦_CA_Canada_1 " 
+  - "🇨🇦_CA_Canada" 
 - name: "🎯 Global Direct Connection" 
   type: "select" 
   proxies: 
