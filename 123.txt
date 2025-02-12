@@ -180,9 +180,6 @@ proxy-groups:
   proxies: 
   - "♻️ Automatic Selection" 
   - "DIRECT" - " 
-  🇺🇸_US_United 
-  States_1" - " 
-  🇺🇦_UA_Ukraine 
   " - "🇨🇦_CA_Canada" 
   - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
   - "🇺🇸_US_United States_3" 
