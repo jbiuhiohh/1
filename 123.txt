@@ -379,8 +379,8 @@ rule-providers:
     type: "http" 
     behavior: "classical" 
     url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list" 
-    format: "text" interval: 
-    3600 
+    format: "text" 
+    interval: 3600 
     path: "./Clash/ProxyLite.list" 
   ChinaDomain: 
     type: "http" 
