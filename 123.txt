@@ -1,7 +1,7 @@
 # Created by: v2rayse.com Automatically created 
 # Created at: 2024-10-08 16:00:00 
 # Node type: ss, trojan, vmess 
----
+--- 
 mixed-port: 7890 
 allow-lan: false 
 mode: "rule" 
@@ -12,208 +12,457 @@ dns:
   listen: "0.0.0.0:53" 
   ipv6: false 
   default-nameserver: 
-    - "223.5.5.5" 
-    - "114.114.114.114" 
+  - "223.5.5.5" 
+  - "114.114.114.114" 
   nameserver: 
-    - "223.5.5.5" 
-    - "114.114.114.114" 
-    - "119.29.29.29" 
-    - "180.76.76.76" 
+  - "223.5.5.5" 
+  - "114.114.114.114" 
+  - "119.29.29.29" 
+  - "180.76.76.76" 
   enhanced-mode: "fake-ip" 
   fake-ip-range: "198.18.0.1/16" 
   fake-ip-filter: 
-    - "*.lan" 
-    - "*.localdomain" 
-    - "*.example" 
-    - "*.invalid" 
-    - "*.localhost" 
-    - "*.test" 
-    - "*.local" 
-    - "*.home.arpa" 
-    - "router.asus.com" 
-    - "localhost.sec.qq.com" 
-    - "localhost.ptlogin2.qq.com" 
-    - "+.msft connecttest.com" 
+  - "*.lan" 
+  - "*.localdomain" 
+  - "*.example" 
+  - "*.invalid" 
+  - "*.localhost" 
+  - "*.test" 
+  - "*.local" 
+  - "*.home.arpa" 
+  - "router.asus.com" 
+  - "localhost.sec.qq.com" 
+  - "localhost.ptlogin2.qq.com" 
+  - "+.msft connecttest.com" 
 tun: 
   enable: true 
   auto-route: true 
   auto-detect-interface: true 
   dns-hijack: 
-    - "114.114.114.114" 
-    - "180.76.76.76" 
-    - "119.29.29.29" 
-    - "223.5.5.5" 
-    - "8.8.8.8" 
-    - "8.8.4.4" 
-    - "1.1.1.1" 
-    - "1.0.0.1" 
+  - "114.114.114.114" 
+  - "180.76.76.76" 
+  - "119.29.29.29" 
+  - "223.5.5.5" 
+  - "8.8.8.8" 
+  - "8.8.4.4" 
+  - "1.1.1.1" 
+  - "1.0.0.1" 
 proxies: 
-  - name: "🇺🇸_US_美国_1" 
-    type: "ss" 
-    server: "69.50.95.203" 
-    port: 8119 
-    cipher: "aes-256-gcm" 
-    password: "cdBIDV42DCwnfIN" 
-  - name: "🇺🇦_UA_江西_" 
-    type: "ss" 
-    server: "178.211.130.142" 
-    port: 32638 
-    cipher: "aes-128-gcm" 
-    password: "ftUnVhcuB7K7sjaqj4gcT+TnEE2MJN3iWlFK0wWQlBA=" 
-  - name: "🇨🇦_CA_加拿大_" 
-    type: "ss" 
-    server: "142.4.216.225" 
-    port: 80 
-    cipher: "chacha20-ietf-poly1305" 
-    password: "JIhN6rBKkaEboLNXVSv5rq" 
-  - name: "🇺🇸_US_美国->🇮🇪_IE_欧美" 
-    type: "trojan" 
-    server: "3.97.171.112" 
-    port: 22222 
-    sni: "trojan.burgerip.co.uk" 
-    password: "telegram-id-directvpn" 
-    skip-cert-verify: false 
-  - name: "🇺🇸_US_美国_3" 
-    type: "ss" 
-    server: "139.64.165.153" 
-    port: 9101 
-    cipher: "aes-256-gcm" 
-    password: "e4FCWrgpkji3QY" 
-  - name: "🇨🇦_CA_加拿大_1" 
-    type: "ss" 
-    server: "23.154.136.176" 
-    port: 8118 
-    cipher: "aes-256-gcm" 
-    password: "cdBIDV42DCwnfIN" 
-  - name: "🇺🇸_US_美国_5" 
-    type: "ss"
-    server: "69.50.95.203" 
-    port: 5498 
-    cipher: "aes-256-gcm" 
-    password: "lGqs95QkFHo2NV" 
-  - name: "🇺🇸_US_USA_7" 
-    type: "ss" 
-    server: "69.50.92.111" 
-    port: 8888 
-    cipher: "aes-256-gcm" 
-    password: "Y6R9pAtvxxzmGC" 
-  - name: "🇬🇧_GB_UK" 
-    type: "trojan" 
-    server: "35.177.219.234" 
-    port: 22222 
-    sni: "trojan.burgerip.co.uk" 
-    password: "telegram-id-privatevpns" 
-    network: "tcp" 
-    alpn: 
-      - "http/1.1" 
-  - name: "🇺🇸_US_US_8" 
-    type: "ss" 
-    server: "69.50.95.203" 
-    port: 6679 
-    cipher: "aes-256-gcm" 
-    password: "TEzjfAYq2IjtuoS" 
-  - name: "🇺🇸_US_US_9" 
-    type: "ss" 
-    server: "69.50.95.165" 
-    port: 5499 
-    cipher: "aes-256-gcm" 
-    password: "lGqs95QkFHo2NV" 
-  - name: "🇺🇸_US_USA_10" 
-    type: "ss" 
-    server: "139.64.165.101" 
-    port: 8119 
-    cipher: "aes-256-gcm" 
-    password: "cdBIDV42DCwnfIN" 
-  - name: "🇺🇸_US_美国_11" 
-    type: "ss" 
-    server: "167.88.62.50" 
-    port: 1723 
-    cipher: "chacha20-ietf-poly1305" 
-    password: "Gru.a-XgKzY+=Nl_" 
-  - name: "🇷🇺_RU_俄罗斯" 
-    type: "ss" 
-    server: "194.87.45.189" 
-    port: 40076 
-    cipher: "chacha20-ietf-poly1305" 
-    password: "sOJ7Wo6yHqWQv8FUEq3BKV" 
-  - name: "🇷🇺_RU_俄罗斯_1" 
-    type: "ss" 
-    server: "217.30.10.18" 
-    port: 9019 
-    cipher: "aes-256-cfb" 
-    password: "GA9KzeEgvfxNrgmM" 
-  - name: "🇺🇸_US_US_12" 
-    type: "ss" 
-    server: "139.64.165.101" 
-    port: 8090 
-    cipher: "aes-256-gcm" 
-    password: "PCnnH6SQSnfoS27" 
-  - name: "🇺🇸_US_US_13" 
-    type: "ss" 
-    server: "69.50.95.203" 
-    port: 5601 
-    cipher: "aes-256-gcm" 
-    password: "Y6R9pAtvxxzmGC" 
-  - name: "🇺🇸_US_US_14" 
-    type: "ss" 
-    server: "139.64.165.153" 
-    port: 6697 
-    cipher: "aes-256-gcm" 
-    password: "TEzjfAYq2IjtuoS" 
-  - name: "🇺🇸_US_US_16" 
-    type: "ss" 
-    server: "185.47.253.227" 
-    port: 990 
-    cipher: "chacha20-ietf-poly1305" 
-    password: "f8f7aCzcPKbsF8p3" 
-  - name: "🇨🇳_CN_China->🇺🇸_US_United States" 
-    type: "vmess" 
-    server: "120.232.153.71" 
-    port: 43526 
-    uuid: "21a9bff2-72de-4e62-93ff-8b159f66d875"
-    cipher: "auto" 
-    network: "tcp" 
-    alterId: 64 
+- name: "🇺🇸_US_美国_1" 
+  type: "ss" 
+  server: "69.50.95.203" 
+  port: 8119 
+  cipher: "aes-256-gcm" 
+  password: "cdBIDV42DCwnfIN" 
+- name: "🇺🇦_UA_江西_" 
+  type: "ss" 
+  server: "178.211.130.142" 
+  port: 32638 
+  cipher: "aes-128-gcm" 
+  password: "ftUnVhcuB7K7sjaqj4gcT+TnEE2MJN3iWlFK0wWQlBA=" 
+- name: "🇨🇦_CA_加拿大_" 
+  type: "ss" 
+  server: "142.4.216.225" 
+  port: 80 
+  cipher: "chacha20-ietf-poly1305" 
+  password: "JIhN6rBKkaEboLNXVSv5rq" 
+- name: "🇺🇸_US_美国->🇮🇪_IE_欧美" 
+  type: "trojan" 
+  server: "3.97.171.112" 
+  port: 22222 
+  sni: "trojan.burgerip.co.uk" 
+  password: "telegram-id-directvpn" 
+  skip-cert-verify: false 
+- name:"🇺🇸_US_美国_3" 
+  type: "ss" 
+  server: "139.64.165.153" 
+  port: 9101 
+  cipher: "aes-256-gcm" 
+  password: "e4FCWrgpkji3QY" 
+- name: "🇨🇦_CA_加拿大_1" 
+  type: "ss" 
+  server: "23.154.136.176" 
+  port: 8118 
+  cipher: "aes-256-gcm" 
+  password: "cdBIDV42DCwnfIN" 
+- name: "🇺🇸_US_美国_5" 
+  type: "ss"
+  server: "69.50.95.203" 
+  port: 5498 
+  cipher: "aes-256-gcm" 
+  password: "lGqs95QkFHo2NV" 
+- name: "🇺🇸_US_USA_7" 
+  type: "ss" 
+  server: "69.50.92.111" 
+  port: 8888 
+  cipher: "aes-256-gcm" 
+  password: "Y6R9pAtvxxzmGC" 
+- name: "🇬🇧_GB_UK" 
+  type: "trojan" 
+  server: "35.177.219.234" 
+  port: 22222 
+  sni: "trojan.burgerip.co.uk " 
+  password: "telegram-id-privatevpns" 
+  network: "tcp" 
+  alpn: 
+  - "http/1.1" 
+- name: "🇺🇸_US_US_8" 
+  type: "ss" 
+  server: "69.50.95.203" 
+  port: 6679 
+  cipher: "aes-256-gcm" 
+  password: "TEzjfAYq2IjtuoS" 
+- name: "🇺🇸_US_US_9" 
+  type: "ss" 
+  server: "69.50.95.165" 
+  port: 5499 
+  cipher: "aes-256-gcm" 
+  password: "lGqs95QkFHo2NV" 
+- name: "🇺🇸_US_USA_10" 
+  type: "ss" 
+  server: "139.64 .165.101" 
+  port: 8119 
+  cipher: "aes-256-gcm" 
+  password: "cdBIDV42DCwnfIN" 
+- name: "🇺🇸_US_美国_11" 
+  type: "ss" 
+  server: "167.88.62.50" 
+  port: 1723 
+  cipher: "chacha20-ietf-poly1305" 
+  password: "Gru.a-XgKzY+=Nl_" 
+- name: "🇷🇺 _RU_俄罗斯" 
+  type: "ss" 
+  server: "194.87.45.189" 
+  port: 40076 
+  cipher: "chacha20-ietf-poly1305" 
+  password: "sOJ7Wo6yHqWQv8FUEq3BKV" 
+- name: "🇷🇺_RU_俄罗斯_1" 
+  type: "ss" 
+  server: "217.30.10.18" 
+  port: 9019 
+  cipher: "aes-256-cfb" 
+  password: "GA9KzeEgvfxNrgmM" 
+- name: "🇺🇸_US_US_12" 
+  type: "ss" 
+  server: "139.64.165.101" 
+  port: 8090 
+  cipher: "aes-256-gcm" 
+  password: "PCnnH6SQSnfoS27" 
+- name: "🇺🇸 _US_US_13" 
+  type: "ss" 
+  server: "69.50.95.203" 
+  port: 5601 
+  cipher: "aes-256-gcm" 
+  password: "Y6R9pAtvxxzmGC" 
+- name: "🇺🇸_US_US_14" 
+  type: " ss" 
+  server: "139.64.165.153" 
+  port: 6697 
+  cipher:"aes-256-gcm" 
+  password: "TEzjfAYq2IjtuoS" 
+- name: "🇺🇸_US_US_16" 
+  type: "ss" 
+  server: "185.47.253.227" 
+  port: 990 
+  cipher: "chacha20-ietf-poly1305" 
+  password: "f8f7aCzcPKbsF8p3" 
+- name: "🇨🇳_CN_China->🇺🇸_US_United States" 
+  type: "vmess" 
+  server: "120.232.153.71" 
+  port: 43526 
+  uuid: "21a9bff2-72de-4e62-93ff-8b159f66d875"
+  cipher: "auto" 
+  network: "tcp" 
+  alterId: 64 
 proxy-groups: 
-  - name: "🚀 Node Selection" 
-    type: "select" 
-    proxies: 
-      - "🇺🇸_US_美国_1" 
-      - "🇺🇦_UA_江西_" 
-      - "🇨🇦_CA_加拿大_1" 
-      - "🇺🇸_US_美国->🇮🇪_IE_欧美" 
-      - "🇺🇸_US_美国_3" 
-      - "🇺🇸_US_USA_7" 
-      - "🇺🇸_US_US_8" 
-      - "🇺🇸_US_US_9" 
-      - "🇺🇸_US_美国_11" 
-      - "🇺🇸_US_美国_12" 
-      - "🇷🇺_RU_俄罗斯" 
-      - "🇷🇺_RU_俄罗斯_1" 
-rule-providers:
+- name: "🚀 Node Selection" 
+  type: "select" 
+  proxies: 
+  - "♻️ Automatic Selection" 
+  - "DIRECT" - " 
+  🇺🇸_US_United 
+  States_1" - " 
+  🇺🇦_UA_Ukraine 
+  " - "🇨🇦_CA_Canada" 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - "🇺🇸_US_United States_3" 
+  - "🇨🇦_CA_Canada_1" 
+  - "🇺🇸_US_United States_5" - "🇺🇸_US_United States_7" 
+  - "🇬🇧_GB_United Kingdom" 
+  - "🇺🇸_US_United States_8" 
+  - "🇺🇸_US_United States_9" 
+  - 
+  " 
+  🇺🇸_US_United States_10 " - "🇺🇸_US_United 
+  States_11" - "🇷🇺_RU_Russia" - "🇷🇺_RU_Russia_1" 
+  - "🇺🇸_US_United States_12 
+  " - "🇺🇸_US_United States_13" 
+  - "🇺🇸_US_United 
+  States_14" - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "♻️ Auto-select" 
+  type: "url-test" 
+  url: "http://www.gstatic.com/generate_204" 
+  interval: 300 
+  tolerance: 50 
+  proxies: 
+  - "🇺🇸_US_United States_1" 
+  - 
+  "🇺🇦_UA_Ukraine" 
+  - "🇨🇦_CA_Canada" - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - "🇺🇸_US_United States_3" 
+  - "🇨🇦_CA_Canada_1 " - " 
+  🇺🇸_US_United States_5 " - "🇺🇸_US_United States_7" - 
+  "🇬🇧_GB_United Kingdom" - 
+  " 
+  🇺🇸_US_United States_8" - 
+  "🇺🇸_US_United States_9 
+  " - "🇺🇸_US_United 
+  States_10" - "🇺🇸_US_United States_11" 
+  - "🇷🇺_RU_Russia" 
+  - "🇷🇺_RU_Russia_1" 
+  - "🇺🇸_US_United 
+  States_12" 
+  - "🇺🇸_US_United States_13" 
+  - "🇺🇸_US_United States_14" - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "🌍 Foreign Media" 
+  type: "select" 
+  proxies:
+  - "🚀 Node Selection" 
+  - "♻️ Automatic Selection" 
+  - "🎯 Global Direct Connection" 
+  - "🇺🇸_US_United States_1" 
+  - "🇺🇦_UA_Ukraine" - 
+  "🇨🇦_CA_Canada " 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" - 
+  "🇺🇸_US_United States_3 
+  " - "🇨🇦_CA_Canada_1 " - 
+  "🇺🇸_US_United States_5" 
+  - 
+  "🇺🇸_US_United States_7" - "🇬🇧_GB_United Kingdom" - " 
+  🇺🇸_US_United States_8" 
+  - "🇺🇸_US_United States_9" 
+  - "🇺🇸_US_United States_10" 
+  - "🇺🇸_US_United States_11" 
+  - " 
+  🇷🇺_RU_Russia" 
+  - " 
+  🇷🇺_RU_Russia_1" - "🇺🇸_US_United States_12" 
+  - "🇺🇸_US_United States_13" - "🇺🇸_US_United States_14" 
+  - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "📲 Telegram message" 
+  type: "select" 
+  proxies: 
+  - "🚀 Node selection" 
+  - "🎯 Global direct connection" 
+  - "🇺🇸_US_United States_1" 
+  - "🇺🇦_UA_Ukraine" 
+  - "🇨🇦_CA_Canada" 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - "🇺🇸_US_United States_3" 
+  - "🇨🇦_CA_Canada_1" 
+  - "🇺🇸_US_United States_5"
+  - "🇺🇸_US_United States_7" 
+  - "🇬🇧_GB_United Kingdom" 
+  - 
+  " 
+  🇺🇸_US_United States_8" - "🇺🇸_US_United States_9" 
+  - "🇺🇸_US_United States_10" 
+  - 
+  "🇺🇸_US_United States_11" - " 
+  🇷🇺_RU_Russia " - "🇷🇺_RU_Russia_1" - "🇺🇸_US_United States_12" 
+  - "🇺🇸_US_United States_13" 
+  - "🇺🇸_US_United States_14" 
+  - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "Ⓜ️ Microsoft Services" 
+  type: "select" 
+  proxies: 
+  - "🎯 Global Direct Connection" 
+  - "🚀 Node Selection" 
+  - "🇺🇸_US_United States_1 
+  " 
+  - 
+  "🇺🇦_UA_Ukraine" - "🇨🇦_CA_Canada " 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - "🇺🇸_US_United States_3 " - "🇨🇦_CA_Canada_1 
+  " 
+  - "🇺🇸_US_United States_5" - "🇺🇸_US_United States_7" 
+  - "🇬🇧_GB_United Kingdom" - 
+  "🇺🇸_US_United States_8" 
+  - "🇺🇸_US_United States_9" 
+  - "🇺🇸_US_United States_10" 
+  - "🇺🇸_US_United States_11" 
+  - " 
+  🇷🇺_RU_Russia" 
+  - " 
+  🇷🇺_RU_Russia_1" - "🇺🇸_US_United States_12" 
+  - "🇺🇸_US_United States_13" - "🇺🇸_US_United States_14" 
+  - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "🍎 Apple Service" 
+  type: "select" 
+  proxies: 
+  - "🚀 Node Selection" 
+  - "🎯 Global Direct Connection" 
+  - "🇺🇸_US_United States_1" 
+  - "🇺🇦_UA_Ukraine" 
+  - "🇨🇦_CA_Canada" 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - " 
+  🇺🇸_US_United States_3" 
+  - "🇨🇦_CA_Canada_1 " 
+  - "🇺🇸_US_United States_5" - "🇺🇸_US_United States_7 " 
+  - 
+  "🇬🇧_GB_United Kingdom" 
+  - 
+  "🇺🇸_US_United States_8" - "🇺🇸_US_United States_9" - "🇺🇸_US_United States_10" 
+  - "🇺🇸_US_United States_11" 
+  - "🇷🇺_RU_Russia" 
+  - "🇷🇺_RU_Russia_1" 
+  - "🇺🇸_US_United States_12" 
+  - "🇺🇸_US_United States_13" 
+  - "🇺🇸_US_United States_14" 
+  - "🇺🇸_US_United States_16" 
+  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+- name: "🎯 Global Direct Connection" 
+  type: "select" 
+  proxies: 
+  - "DIRECT" 
+  - "🚀 Node Selection" 
+  - "♻️ Automatic Selection" 
+- name: "🛑 Global Interception" 
+  type: "select" 
+  proxies: 
+  - "REJECT" 
+  - "DIRECT" 
+- name:"🍃 Application purification" 
+  type: "select" 
+  proxies: 
+  - "REJECT" 
+  - "DIRECT" 
+- name: "🐟 The fish that slipped through the net" 
+  type: "select" 
+  proxies: 
+  - "🚀 Node selection" 
+  - "🎯 Global direct connection" 
+  - "♻️ Automatic selection" 
+  - "🇺🇸_US_United States_1" 
+  - "🇺🇦_UA_Ukraine 
+  " - "🇨🇦_CA_Canada" 
+  - "🇺🇸_US_United States->🇮🇪_IE_Ireland" 
+  - "🇺🇸_US_United States_3" - 
+  "🇨🇦_CA_Canada_1 " - 
+  "🇺🇸_US_United States_5" 
+  - "🇺🇸_US_United States_7" 
+  - "🇬🇧_GB_United Kingdom" 
+  - "🇺🇸_US_United States_8"
+rule-providers: 
+  Apple: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/Apple.list" 
+  Telegram: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/Telegram.list" 
   ProxyLite: 
     type: "http" 
     behavior: "classical" 
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list" 
-    format: "text"
-  ProxyLiteV2: 
+    url: "https://raw.githubuser content.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list" 
+    format: "text" interval: 
+    3600 
+    path: "./Clash/ProxyLite.list" 
+  ChinaDomain: 
     type: "http" 
     behavior: "classical" 
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLiteV2.list" 
-    format: "text"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/ChinaDomain.list" 
+  ChinaCompanyIp: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/ChinaCompanyIp.list" 
+  ProxyMedia: 
+    type: "http " 
+    behavior : "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ ACL4SSR/master/Clash/ProxyMedia.list" 
+    format: "text" 
+    interval : 3600 
+    path: "./Clash/ProxyMedia.list" 
+  LocalAreaNetwork: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash /LocalAreaNetwork.list" 
+  Microsoft: 
+    type:"http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/Microsoft. list" 
+  GoogleCN: 
+    type: "http" 
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/GoogleCN.list" 
+  BanAD: 
+    type: "http " 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/BanAD.list" 
+  BanProgramAD: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./ Clash/BanProgramAD.list" 
+  SteamCN: 
+    type: "http" 
+    behavior: "classical" 
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list" 
+    format: "text" 
+    interval: 3600 
+    path: "./Clash/SteamCN.list" 
 rules:
-  - "DOMAIN-KEYWORD,cn,🇨🇳_CN_China->🇺🇸_US_United States"
-  - "DOMAIN-SUFFIX,google.com,🇺🇸_US_美国_1"
-  - "DOMAIN-SUFFIX,baidu.com,🇨🇳_CN_China->🇺🇸_US_United States"
-  - "DOMAIN-SUFFIX,t.co,🇺🇸_US_美国_12"
-  - "DOMAIN-SUFFIX,qq.com,🇨🇳_CN_China->🇺🇸_US_United States"
-  - "DOMAIN-SUFFIX,t.me,🇺🇸_US_US_14"
-  - "DOMAIN-SUFFIX,weibo.com,🇨🇳_CN_China->🇺🇸_US_United States"
-  - "DOMAIN-KEYWORD,google,🇺🇸_US_美国_3"
-  - "DOMAIN-SUFFIX,github.com,🇺🇸_US_美国_5"
-  - "DOMAIN-SUFFIX,github.io,🇺🇸_US_美国_5"
-  - "DOMAIN-SUFFIX,youtube.com,🇺🇸_US_USA_10"
-  - "DOMAIN-SUFFIX,twitch.tv,🇺🇸_US_美国_11"
-  - "DOMAIN-SUFFIX,netflix.com,🇺🇸_US_US_9"
-  - "DOMAIN-SUFFIX,telegram.org,🇷🇺_RU_俄罗斯"
-
+- "DOMAIN-KEYWORD,porn,🚀Node Selection"
+- "DOMAIN-SUFFIX,phncdn.com,🚀Node Selection"
+- "DOMAIN-SUFFIX,phprcdn.com,🚀Node Selection"
+- "DOMAIN-SUFFIX,pornhub.com,🚀Node Selection"
+- "DOMAIN-SUFFIX,pornhubpremium.com,🚀Node Selection"
+- "DOMAIN-SUFFIX,rdtcdn.com,🚀Node Selection"
+- "DOMAIN-SUFFIX,redtube.com,🚀Node Selection"
+- "RULE- SET,LocalAreaNetwork,🎯 Global Direct Connection" 
+- "RULE-SET,BanAD,🛑 Global Blocking" 
+- "RULE-SET,BanProgramAD,🍃 Application Purification" 
+- "RULE-SET,GoogleCN,🎯 Global Direct Connection" 
+- "RULE- SET,SteamCN,🎯 Global Direct Connection" 
+- "RULE-SET,Microsoft,Ⓜ️ Microsoft Services" 
+- "RULE-SET,Apple,🍎 Apple Services" 
+- "RULE-SET,ProxyMedia,🌍 Foreign Media" 
+- "RULE-SET ,Telegram,📲 Telegram message" 
+- "RULE-SET,ProxyLite,🚀Node Selection" 
+- "RULE-SET,ChinaDomain,🎯Global Direct Connection" 
+- "RULE-SET,ChinaCompanyIp,🎯Global Direct Connection" 
+- "GEOIP,CN,🎯Global Direct Connection" 
+- " MATCH,🐟 The fish that slipped through the net"
