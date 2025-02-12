@@ -359,16 +359,6 @@ proxy-groups:
   - "🇺🇸_US_United States_7" 
   - "🇬🇧_GB_United Kingdom" 
   - "🇺🇸_US_United States_8"
- - "🇺🇸_US_United States_9 
-  " 
-  - " 
-  🇺🇸_US_United 
-  States_10" 
-  - "🇺🇸_US_United States_11 " - "🇷🇺_RU_Russia" - "🇷🇺_RU_Russia_1 
-  " 
-  - "🇺🇸_US_United States_12" 
-  - "🇺🇸_US_United States_13" - "🇺🇸_US_United States_14" - "🇺🇸_US_United States_16" 
-  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
 rule-providers: 
   Apple: 
     type: "http" 
@@ -454,7 +444,7 @@ rule-providers:
     format: "text" 
     interval: 3600 
     path: "./Clash/SteamCN.list" 
-rules:
+rules: 
 - "RULE- SET,LocalAreaNetwork,🎯 Global Direct Connection" 
 - "RULE-SET,BanAD,🛑 Global Blocking" 
 - "RULE-SET,BanProgramAD,🍃 Application Purification" 
@@ -463,9 +453,3 @@ rules:
 - "RULE-SET,Microsoft,Ⓜ️ Microsoft Services" 
 - "RULE-SET,Apple,🍎 Apple Services" 
 - "RULE-SET,ProxyMedia,🌍 Foreign Media" 
-- "RULE-SET ,Telegram,📲 Telegram message" 
-- "RULE-SET,ProxyLite,🚀Node Selection" 
-- "RULE-SET,ChinaDomain,🎯Global Direct Connection" 
-- "RULE-SET,ChinaCompanyIp,🎯Global Direct Connection" 
-- "GEOIP,CN,🎯Global Direct Connection" 
-- " MATCH,🐟 The fish that slipped through the net"
