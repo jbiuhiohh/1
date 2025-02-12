@@ -359,16 +359,7 @@ proxy-groups:
   - "🇺🇸_US_United States_7" 
   - "🇬🇧_GB_United Kingdom" 
   - "🇺🇸_US_United States_8"
-  rule-providers: Apple: type: "http" behavior: "classical" url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list" format: "text" interval: - "🇺🇸_US_United States_9 
-  " 
-  - " 
-  🇺🇸_US_United 
-  States_10" 
-  - "🇺🇸_US_United States_11 " - "🇷🇺_RU_Russia" - "🇷🇺_RU_Russia_1 
-  " 
-  - "🇺🇸_US_United States_12" 
-  - "🇺🇸_US_United States_13" - "🇺🇸_US_United States_14" - "🇺🇸_US_United States_16" 
-  - "🇨🇳_CN_中国->🇺🇸_US_United States" 
+
 rule-providers: 
   Apple: 
     type: "http" 
