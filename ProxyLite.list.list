@@ -30,6 +30,19 @@ DOMAIN-SUFFIX,gog.com
 DOMAIN-SUFFIX,intel.com
 DOMAIN-SUFFIX,habr.com
 
+# Разрешение трафика для Viber
+DOMAIN-SUFFIX,viber.com
+DOMAIN-SUFFIX,viber.me
+DOMAIN-SUFFIX,viber.org
+
+# IP-диапазоны Viber (IPv4)
+IP-CIDR,185.220.56.0/22,no-resolve
+IP-CIDR,185.220.58.0/22,no-resolve
+IP-CIDR,185.220.60.0/22,no-resolve
+IP-CIDR,185.220.62.0/22,no-resolve
+
+# IP-диапазоны Viber (IPv6)
+IP-CIDR6,2a01:5f8:ff00::/48,no-resolve
 
 # 国外域名
 DOMAIN-SUFFIX,eu
