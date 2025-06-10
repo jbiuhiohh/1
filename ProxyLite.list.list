@@ -290,6 +290,7 @@ DOMAIN-SUFFIX,instagr.am
 
 
 # OpenAi
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 
