@@ -5,53 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700, server: 101.99.91.234, port: 36700, type: vmess, uuid: 127ff43c-1851-4b2d-ba8c-6afba21ec04d, alterId: 0, cipher: auto, tls: false}
+  - {name: "[openproxylist.com] vmess-US", server: 104.21.80.1, port: 80, type: vmess, uuid: 90f357dd-79ac-47c6-b0b8-958e2d19de07, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /10W6SJaK0F0oVXeNU6S2RVRP, headers: {Host: 5tghyu8.999820.xyz}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -74,4 +74,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - VM-TCP-NA 🇲🇾 MY-101.99.91.234:36700
+      - "[openproxylist.com] vmess-US"
+rules:
+  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
+  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
