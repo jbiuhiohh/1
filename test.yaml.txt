@@ -24,6 +24,7 @@ proxy-groups:
   - "DIRECT"
   - "🇨🇦_CA_Canada"
   - "🇷🇺_RU_俄罗斯_1"
+  -"@VMESSIR4N جهت خرید کانفیگ"
 rule-providers:
  ProxyLite:
     type: "http"
