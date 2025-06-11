@@ -4,7 +4,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: opopo, server: 185.225.201.116, port: 443, type: vmess, uuid: 6f96ee44-5e72-4812-9043-a5a6e338b152, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: "dns.google,cloudflare-dns.com"}
+  - {name: opopo, server: 185.225.201.116, port: 443, type: vmess, uuid: 6f96ee44-5e72-4812-9043-a5a6e338b152, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.google.com}
 proxy-groups:
 - name: "🚀 节点选择"
   type: "select"
