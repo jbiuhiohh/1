@@ -1,7 +1,4 @@
-# 创建者：v2rayse.com 自动创建
-# 创建时间：2025-02-10 08:00:00
-# 节点类型：ss, vmess, trojan
----
+
 mixed-port: 7890
 allow-lan: false
 mode: "rule"
