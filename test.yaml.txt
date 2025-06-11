@@ -35,3 +35,4 @@ rule-providers:
     path: "./Clash/ProxyLite.list"
 rules:
 - "RULE-SET,ProxyLite,🚀 节点选择"
+---
