@@ -4,6 +4,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 proxies:
+- {name: (S102)🇩🇪t.me/PrivateVPNs, server: 35.157.140.150, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
 - name: "🇷🇺_RU_俄罗斯_1"
   type: "ss"
   server: "217.30.10.18"
