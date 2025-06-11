@@ -1,3 +1,4 @@
+11111111
 mixed-port: 7890
 allow-lan: false
 mode: "rule"
