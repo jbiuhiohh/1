@@ -27,7 +27,6 @@ proxy-groups:
   type: "select"
   proxies:
   - "🚀 节点选择"
-  - "🎯 全球直连"
   - "🇨🇦_CA_Canada"
   - "🇷🇺_RU_俄罗斯_1"
 rule-providers:
