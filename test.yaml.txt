@@ -23,12 +23,6 @@ proxy-groups:
   - "DIRECT"
   - "🇨🇦_CA_Canada"
   - "🇷🇺_RU_俄罗斯_1"
-- name: "🐟 漏网之鱼"
-  type: "select"
-  proxies:
-  - "🚀 节点选择"
-  - "🇨🇦_CA_Canada"
-  - "🇷🇺_RU_俄罗斯_1"
 rule-providers:
  ProxyLite:
     type: "http"
@@ -39,4 +33,3 @@ rule-providers:
     path: "./Clash/ProxyLite.list"
 rules:
 - "RULE-SET,ProxyLite,🚀 节点选择"
-- "MATCH,🐟 漏网之鱼"
