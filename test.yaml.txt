@@ -154,6 +154,13 @@ rule-providers:
     interval: 3600
     path: "./Clash/SteamCN.list"
 rules:
+# Исключаем TorrServe (локальный IP)
+- IP-CIDR,192.168.31.249/32,DIRECT
+# Исключаем DNS/трекеры BitTorrent
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DST-PORT,1337,DIRECT
+- DST-PORT,6969,DIRECT
+- DST-PORT,51413,DIRECT
 - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
 - "RULE-SET,BanAD,🛑 全球拦截"
 - "RULE-SET,BanProgramAD,🍃 应用净化"
