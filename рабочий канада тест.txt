@@ -67,6 +67,7 @@ proxy-groups:
   - "🎯 全球直连"
   - "♻️ 自动选择"
   - "pfi8xz5b"
+  - "DIRECT"
 rule-providers:
   Apple:
     type: "http"
