@@ -1,1 +1,182 @@
-
+ipv6: false
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: pfi8xz5b, server: 185.225.201.116, port: 13944, type: vmess, uuid: 57dab09f-7558-4ddb-99db-58fcdb58d920, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, tfo: false}
+proxy-groups:
+- name: "🚀 节点选择"
+  type: "select"
+  proxies:
+  - "♻️ 自动选择"
+  - "DIRECT"
+  - "pfi8xz5b"
+- name: "♻️ 自动选择"
+  type: "url-test"
+  url: "http://www.gstatic.com/generate_204"
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "pfi8xz5b"
+- name: "🌍 国外媒体"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+  - "🎯 全球直连"
+  - "pfi8xz5b"
+- name: "📲 电报信息"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "pfi8xz5b"
+- name: "Ⓜ️ 微软服务"
+  type: "select"
+  proxies:
+  - "🎯 全球直连"
+  - "🚀 节点选择"
+  - "pfi8xz5b"
+- name: "🍎 苹果服务"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "pfi8xz5b"
+- name: "🎯 全球直连"
+  type: "select"
+  proxies:
+  - "DIRECT"
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+- name: "🛑 全球拦截"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🍃 应用净化"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🐟 漏网之鱼"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "♻️ 自动选择"
+  - "pfi8xz5b"
+  - "DIRECT"
+rule-providers:
+  Apple:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Apple.list"
+  Telegram:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Telegram.list"
+  ProxyLite:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyLite.list"
+  ChinaDomain:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaDomain.list"
+  ChinaCompanyIp:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaCompanyIp.list"
+  ProxyMedia:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyMedia.list"
+  LocalAreaNetwork:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/LocalAreaNetwork.list"
+  Microsoft:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Microsoft.list"
+  GoogleCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/GoogleCN.list"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanAD.list"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanProgramAD.list"
+  SteamCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/SteamCN.list"
+rules:
+rules:
+- IP-CIDR,192.168.31.249/32,DIRECT
+- DOMAIN,tracker2.itzmx.com,DIRECT
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-SUFFIX,torrent,DIRECT
+- DST-PORT,6881-6999,DIRECT
+- DST-PORT,51413,DIRECT
+- DST-PORT,1337,DIRECT
+- DST-PORT,6969,DIRECT
+- "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+- "RULE-SET,BanAD,🛑 全球拦截"
+- "RULE-SET,BanProgramAD,🍃 应用净化"
+- "RULE-SET,GoogleCN,🎯 全球直连"
+- "RULE-SET,SteamCN,🎯 全球直连"
+- "RULE-SET,Microsoft,Ⓜ️ 微软服务"
+- "RULE-SET,Apple,🍎 苹果服务"
+- "RULE-SET,ProxyMedia,🌍 国外媒体"
+- "RULE-SET,Telegram,📲 电报信息"
+- "RULE-SET,ProxyLite,🚀 节点选择"
+- "RULE-SET,ChinaDomain,🎯 全球直连"
+- "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+- "GEOIP,CN,🎯 全球直连"
+- "MATCH,🐟 漏网之鱼"
