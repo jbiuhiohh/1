@@ -5,12 +5,12 @@ log-level: info
 external-controller: :9090
 
 proxies:
-   - {name: yf9g2ahp, server: 185.225.201.116, port: 49992, type: ss, cipher: 2022-blake3-aes-256-gcm, password: KXmhlVKTIUxw1QjGP8XeZo1CKkEfNA4FS6v4Q4y9fQg=:hN74DHtkV3fumhahI6dFr7EBlPCCWG3/6VJSTYgI/IQ=}
+   - {name: heu51xo8, server: 185.225.201.116, port: 52508, type: vmess, uuid: e3ce45b9-aee8-4298-b696-fc492857bc31, alterId: 0, cipher: auto, tls: true}
 proxy-groups:
   - name: YouTube-Proxy
     type: select
     proxies:
-      - yf9g2ahp
+      - heu51xo8
       - DIRECT
 
 rules:
