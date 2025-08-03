@@ -6,7 +6,7 @@ log-level: info
 external-controller: :9090
 
 proxies:
-   - {name: x03web0p, server: 185.225.201.116, port: 23482, type: vmess, uuid: b42b0a7e-bffc-42de-b22a-bcea6d91a61b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true}
+   - {name: yf9g2ahp, server: 185.225.201.116, port: 49992, type: ss, cipher: 2022-blake3-aes-256-gcm, password: KXmhlVKTIUxw1QjGP8XeZo1CKkEfNA4FS6v4Q4y9fQg=:hN74DHtkV3fumhahI6dFr7EBlPCCWG3/6VJSTYgI/IQ=}
 proxy-groups:
   - name: YouTube-Proxy
     type: select
@@ -20,6 +20,7 @@ rules:
   - DOMAIN-KEYWORD,youtube,YouTube-Proxy
   - DOMAIN-KEYWORD,ytimg,YouTube-Proxy
   - MATCH,DIRECT
+
 
 
 
