@@ -10,7 +10,7 @@ proxy-groups:
   - name: YouTube-Proxy
     type: select
     proxies:
-      - pfi8xz5b
+      - x03web0p
       - DIRECT
 
 rules:
@@ -19,5 +19,6 @@ rules:
   - DOMAIN-KEYWORD,youtube,YouTube-Proxy
   - DOMAIN-KEYWORD,ytimg,YouTube-Proxy
   - MATCH,DIRECT
+
 
 
