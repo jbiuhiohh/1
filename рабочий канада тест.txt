@@ -17,9 +17,15 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
+- name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - pfi8xz5b
    
 rules:
-
 - DOMAIN-SUFFIX,pornhub.com,🚀 节点选择
 - MATCH,🐟 漏网之鱼
+
 
