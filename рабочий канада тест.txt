@@ -11,20 +11,21 @@ proxies:
     port: 13944
     uuid: 57dab09f-7558-4ddb-99db-58fcdb58d920
     alterId: 0
-    cipher: auto
+    cipher: aes-128-gcm
     tls: false
     skip-cert-verify: true
 
 proxy-groups:
-  - name: 🚀 YouTube Proxy
+  - name: YouTube-Proxy
     type: select
     proxies:
       - pfi8xz5b
       - DIRECT
 
 rules:
-  - DOMAIN-SUFFIX,youtube.com,🚀 YouTube Proxy
-  - DOMAIN-SUFFIX,ytimg.com,🚀 YouTube Proxy
-  - DOMAIN-KEYWORD,youtube,🚀 YouTube Proxy
-  - DOMAIN-KEYWORD,ytimg,🚀 YouTube Proxy
+  - DOMAIN-SUFFIX,youtube.com,YouTube-Proxy
+  - DOMAIN-SUFFIX,ytimg.com,YouTube-Proxy
+  - DOMAIN-KEYWORD,youtube,YouTube-Proxy
+  - DOMAIN-KEYWORD,ytimg,YouTube-Proxy
   - MATCH,DIRECT
+
