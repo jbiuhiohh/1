@@ -11,39 +11,39 @@ proxy-groups:
   proxies:
   - "♻️ 自动选择"
   - "DIRECT"
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "♻️ 自动选择"
   type: "url-test"
   url: "http://www.gstatic.com/generate_204"
   interval: 300
   tolerance: 50
   proxies:
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "🌍 国外媒体"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "♻️ 自动选择"
   - "🎯 全球直连"
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "📲 电报信息"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "Ⓜ️ 微软服务"
   type: "select"
   proxies:
   - "🎯 全球直连"
   - "🚀 节点选择"
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "🍎 苹果服务"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "pfi8xz5b"
+  - "x03web0p"
 - name: "🎯 全球直连"
   type: "select"
   proxies:
@@ -66,7 +66,7 @@ proxy-groups:
   - "🚀 节点选择"
   - "🎯 全球直连"
   - "♻️ 自动选择"
-  - "pfi8xz5b"
+  - "x03web0p"
   - "DIRECT"
 rule-providers:
   Apple:
