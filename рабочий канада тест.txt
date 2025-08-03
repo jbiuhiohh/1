@@ -17,72 +17,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    proxies:
-      - pfi8xz5b
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - pfi8xz5b
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - pfi8xz5b
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - pfi8xz5b
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - pfi8xz5b
-  - name: 📢 谷歌FCM
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - pfi8xz5b
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - pfi8xz5b
+   
 rules:
-- DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
-- DOMAIN-KEYWORD,admarvel,🛑 全球拦截
-- DOMAIN-SUFFIX,a.youdao.com,🍃 应用净化
-- DOMAIN,alt1-mtalk.google.com,📢 谷歌FCM
-- DOMAIN-SUFFIX,aaplimg.com,🍎 苹果服务
-- DOMAIN-SUFFIX,t.me,📲 电报信息
-- DOMAIN-SUFFIX,yt.be,🌍 国外媒体
-- DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
+
 - DOMAIN-SUFFIX,pornhub.com,🚀 节点选择
-- GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
+
