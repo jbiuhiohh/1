@@ -4,7 +4,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: pfi8xz5b, server: 185.225.201.116, port: 13944, type: vmess, uuid: 57dab09f-7558-4ddb-99db-58fcdb58d920, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, tfo: false}
+  - {name: x03web0p, server: 185.225.201.116, port: 23482, type: vmess, uuid: b42b0a7e-bffc-42de-b22a-bcea6d91a61b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
 proxy-groups:
 - name: "🚀 节点选择"
   type: "select"
