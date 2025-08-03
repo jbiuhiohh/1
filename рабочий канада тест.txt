@@ -1,3 +1,4 @@
+
 mixed-port: 7890
 allow-lan: true
 mode: Rule
@@ -19,6 +20,7 @@ rules:
   - DOMAIN-KEYWORD,youtube,YouTube-Proxy
   - DOMAIN-KEYWORD,ytimg,YouTube-Proxy
   - MATCH,DIRECT
+
 
 
 
