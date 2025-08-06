@@ -36,7 +36,7 @@ rule-providers:
   BanAD:
     type: http
     behavior: classical
-    url: "https://anti-ad.net/easylist.txt"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
     path: ./ruleset/BanAD.yaml
     interval: 86400
 
@@ -67,8 +67,7 @@ proxies:
 proxy-groups:
   - name: "DIRECT"
     type: select
-    proxies:
-      - "DIRECT"
+    
 
   - name: "PROXY"
     type: select
@@ -99,4 +98,3 @@ rules:
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
-
