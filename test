@@ -59,12 +59,14 @@ proxies:
     uuid: cb9f731c-0f68-4997-a254-2e5354b80e13
     network: tcp
     tls: true
-    servername: google.com
     reality-opts:
       public-key: FT3lMLjZ5Ylcp8Svpsl9oQqMxAW1t4YFPg2Ng9R3_x4
       short-id: e4aa569bf544cfcc
-    client-fingerprint: chrome
+       spider-x: /
+    servername: google.com
+    flo: xtls-rprx-vision
     udp: true
+
 
 # 🎚️ Группы прокси
 proxy-groups:
