@@ -32,7 +32,7 @@ rule-providers:
   BlockedSites:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
     path: "./ruleset/BlockedSites.yaml"
     interval: 3600
 
@@ -101,5 +101,6 @@ rules:
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
