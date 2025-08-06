@@ -5,30 +5,24 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🔍 DNS (оптимизировано для РФ)
+# 🔍 DNS
 dns:
   enable: true
   enhanced-mode: fake-ip
   nameserver:
-    - 77.88.8.8  # 🇷🇺 Яндекс (основной)
-    - 77.88.8.1  # 🇷🇺 Яндекс (резервный)
+    - 77.88.8.8
+    - 77.88.8.1
   fake-ip-filter:
-  - "*.ru"
-  - "*.рф"
-  - "*.local"
-  - "*.sber*"
-  - "*.tinkoff*"
-  - "gosuslugi.ru"
-  - "*.mfc.ru"  # Для МФЦ
-  - "*.rkn.gov.ru"  # Для сервисов РКН
+    - "*.ru"
+    - "*.рф"
+    - "*.local"
+    - "*.sber*"
+    - "*.tinkoff*"
 
-# 🚇 TUN (обязательно в России)
+# 🚇 TUN
 tun:
   enable: true
   auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - 77.88.8.8:53  # Перехват DNS для Яндекс
 
 # 📦 Rule Providers
 rule-providers:
@@ -37,12 +31,12 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
     path: ./ruleset/BlockedSites.yaml
-    interval: 3600  # 🔄 Каждый час
+    interval: 3600
 
   BanAD:
     type: http
     behavior: classical
-    url: "https://anti-ad.net/easylist.txt"  # Лучший для РФ
+    url: "https://anti-ad.net/easylist.txt"
     path: ./ruleset/BanAD.yaml
     interval: 86400
 
@@ -53,55 +47,56 @@ rule-providers:
     path: ./ruleset/BanProgramAD.yaml
     interval: 3600
 
-# 🛰️ Прокси-сервер (ваш Reality) 🔥
+# 🛰️ Прокси-сервер
 proxies:
-  - name: "🔒 Reality-VLESS"
+  - name: "Reality-VLESS"
     type: vless
-    server: 185.225.201.116  # 🔥 Ваш IP
+    server: 185.225.201.116
     port: 443
-    uuid: cb9f731c-0f68-4997-a254-2e5354b80e13  # 🔥 Ваш UUID
+    uuid: cb9f731c-0f68-4997-a254-2e5354b80e13
     network: tcp
     tls: true
     servername: google.com
     reality-opts:
-      public-key: FT3lMLjZ5Ylcp8Svpsl9oQqMxAW1t4YFPg2Ng9R3_x4  # 🔥 Ваш ключ
-      short-id: e4aa569bf544cfcc  # 🔥 Ваш ID
+      public-key: FT3lMLjZ5Ylcp8Svpsl9oQqMxAW1t4YFPg2Ng9R3_x4
+      short-id: e4aa569bf544cfcc
     client-fingerprint: chrome
-    udp: true  # 🎮 Для игр/VoIP
+    udp: true
 
-# 🎚️ Группы
+# 🎚️ Группы прокси (БЕЗ эмодзи в именах)
 proxy-groups:
-  - name: "🎯 Прямое подключение"
+  - name: "DIRECT"
     type: select
     proxies:
       - "DIRECT"
 
-  - name: "🚀 Прокси (Reality)"
+  - name: "PROXY"
     type: select
     proxies:
-      - "🔒 Reality-VLESS"
+      - "Reality-VLESS"
 
-  - name: "🛡️ Блокировка"
+  - name: "BLOCK_ADS"  # Упрощённое имя
     type: select
     proxies:
-      - "⛔ REJECT"
-      - "✅ DIRECT"
+      - "REJECT"  # Стандартное имя
+      - "DIRECT"
 
-# 📜 Правила (оптимизированы)
+# 📜 Правила
 rules:
   # 1️⃣ Российские сервисы напрямую
-  - GEOIP,RU,🎯 Прямое подключение
-  - DOMAIN-SUFFIX,ru,🎯 Прямое подключение
-  - DOMAIN-SUFFIX,рф,🎯 Прямое подключение
-  - DOMAIN-SUFFIX,sberbank.ru,🎯 Прямое подключение
-  - DOMAIN-SUFFIX,tinkoff.ru,🎯 Прямое подключение
+  - GEOIP,RU,DIRECT
+  - DOMAIN-SUFFIX,ru,DIRECT
+  - DOMAIN-SUFFIX,рф,DIRECT
+  - DOMAIN-SUFFIX,sberbank.ru,DIRECT
+  - DOMAIN-SUFFIX,tinkoff.ru,DIRECT
 
   # 2️⃣ Заблокированные РКН сайты
-  - RULE-SET,BlockedSites,🚀 Прокси (Reality)
+  - RULE-SET,BlockedSites,PROXY
 
   # 3️⃣ Блокировка рекламы
-  - RULE-SET,BanAD,🛡️ Блокировка
-  - RULE-SET,BanProgramAD,🛡️ Блокировка
+  - RULE-SET,BanAD,BLOCK_ADS  # Используем простое имя
+  - RULE-SET,BanProgramAD,BLOCK_ADS
 
   # 4️⃣ Остальное - напрямую
-  - MATCH,🎯 Прямое подключение
+  - MATCH,DIRECT
+
