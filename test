@@ -75,7 +75,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "Reality-VLESS"
+      - "vless-vision"
 
   - name: "BLOCK_ADS"
     type: select
