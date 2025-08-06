@@ -1,6 +1,7 @@
 # 代理列表
 
 # MyList && Other
+DOMAIN-SUFFIX,habr.com
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,aeza.net
 DOMAIN-SUFFIX,wiki.aeza.net
@@ -26,14 +27,7 @@ DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
 DOMAIN-SUFFIX,buzzsprout.com
 
-# 国外域名
-DOMAIN-SUFFIX,eu
-DOMAIN-SUFFIX,hk
-DOMAIN-SUFFIX,jp
-DOMAIN-SUFFIX,kr
-DOMAIN-SUFFIX,sg
-DOMAIN-SUFFIX,tw
-DOMAIN-SUFFIX,uk
+
 
 # 国外域名关键字
 DOMAIN-KEYWORD,1e100
