@@ -5,24 +5,27 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🔍 DNS
+# 🔍 DNS (оптимизировано для РФ)
 dns:
   enable: true
   enhanced-mode: fake-ip
   nameserver:
-    - 77.88.8.8
-    - 77.88.8.1
+    - 77.88.8.8  # 🇷🇺 Яндекс (основной)
+    - 77.88.8.1  # 🇷🇺 Яндекс (резервный)
   fake-ip-filter:
     - "*.ru"
     - "*.рф"
     - "*.local"
-    - "*.sber*"
-    - "*.tinkoff*"
+    - "*.sber*"  # Для Сбера
+    - "*.tinkoff*" # Для Тинькофф
 
-# 🚇 TUN
+# 🚇 TUN (обязательно в России)
 tun:
   enable: true
   auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 77.88.8.8:53  # Перехват DNS для Яндекс
 
 # 📦 Rule Providers
 rule-providers:
@@ -63,21 +66,17 @@ proxies:
     client-fingerprint: chrome
     udp: true
 
-# 🎚️ Группы прокси (БЕЗ эмодзи в именах)
+# 🎚️ Группы прокси
 proxy-groups:
-  - name: "DIRECT"
-    type: select
-    
-
   - name: "PROXY"
     type: select
     proxies:
       - "Reality-VLESS"
 
-  - name: "BLOCK_ADS"  # Упрощённое имя
+  - name: "BLOCK_ADS"
     type: select
     proxies:
-      - "REJECT"  # Стандартное имя
+      - "REJECT"
       - "DIRECT"
 
 # 📜 Правила
