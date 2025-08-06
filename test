@@ -62,7 +62,7 @@ proxies:
     reality-opts:
       public-key: FT3lMLjZ5Ylcp8Svpsl9oQqMxAW1t4YFPg2Ng9R3_x4
       short-id: e4aa569bf544cfcc
-       spider-x: /
+      spider-x: /
     servername: google.com
     flo: xtls-rprx-vision
     udp: true
