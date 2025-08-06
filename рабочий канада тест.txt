@@ -103,22 +103,16 @@ proxy-groups:
 
 # 📜 Правила
 rules:
-  # 3️⃣ Блокировка рекламы
+  # 1️⃣ Блокировка рекламы
   - RULE-SET,BanAD,BLOCK_ADS  # Используем простое имя
-  - RULE-SET,BanProgramAD,BLOCK_ADS
-  
-  # 1️⃣ Российские сервисы напрямую
-  - GEOIP,CN,DIRECT
-  - DOMAIN-SUFFIX,ru,DIRECT
-  - DOMAIN-SUFFIX,рф,DIRECT
-  - DOMAIN-SUFFIX,sberbank.ru,DIRECT
-  - DOMAIN-SUFFIX,tinkoff.ru,DIRECT
+  - RULE-SET,BanProgramAD,BLOCK_ADS 
 
   # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
