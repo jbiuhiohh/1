@@ -23,8 +23,6 @@ dns:
     ipcidr:
       - 240.0.0.0/4  # Блокирует все IPv6-резолвы (AAAA)
   fake-ip-filter:
-    - "*.ru"
-    - "*.рф"
     - "*.local"
     - "*.sber*"
     - "*.tinkoff*"
@@ -112,6 +110,7 @@ rules:
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
