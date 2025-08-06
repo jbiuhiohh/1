@@ -1,22 +1,107 @@
+# 🌐 Основные настройки
 mixed-port: 7890
-allow-lan: true
-mode: Rule
+allow-lan: false
+mode: rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 
+# 🔍 DNS (оптимизировано для РФ)
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 77.88.8.8  # 🇷🇺 Яндекс (основной)
+    - 77.88.8.1  # 🇷🇺 Яндекс (резервный)
+  fake-ip-filter:
+  - "*.ru"
+  - "*.рф"
+  - "*.local"
+  - "*.sber*"
+  - "*.tinkoff*"
+  - "gosuslugi.ru"
+  - "*.mfc.ru"  # Для МФЦ
+  - "*.rkn.gov.ru"  # Для сервисов РКН
+
+# 🚇 TUN (обязательно в России)
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 77.88.8.8:53  # Перехват DNS для Яндекс
+
+# 📦 Rule Providers
+rule-providers:
+  BlockedSites:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    path: ./ruleset/BlockedSites.yaml
+    interval: 3600  # 🔄 Каждый час
+
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://anti-ad.net/easylist.txt"  # Лучший для РФ
+    path: ./ruleset/BanAD.yaml
+    interval: 86400
+
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    path: ./ruleset/BanProgramAD.yaml
+    interval: 3600
+
+# 🛰️ Прокси-сервер (ваш Reality) 🔥
 proxies:
-   - {name: heu51xo8, server: 185.225.201.116, port: 52508, type: vmess, uuid: e3ce45b9-aee8-4298-b696-fc492857bc31, alterId: 0, cipher: auto, tls: true}
+  - name: "🔒 Reality-VLESS"
+    type: vless
+    server: 185.225.201.116  # 🔥 Ваш IP
+    port: 443
+    uuid: cb9f731c-0f68-4997-a254-2e5354b80e13  # 🔥 Ваш UUID
+    network: tcp
+    tls: true
+    servername: google.com
+    reality-opts:
+      public-key: FT3lMLjZ5Ylcp8Svpsl9oQqMxAW1t4YFPg2Ng9R3_x4  # 🔥 Ваш ключ
+      short-id: e4aa569bf544cfcc  # 🔥 Ваш ID
+    client-fingerprint: chrome
+    udp: true  # 🎮 Для игр/VoIP
+
+# 🎚️ Группы
 proxy-groups:
-  - name: YouTube-Proxy
+  - name: "🎯 Прямое подключение"
     type: select
     proxies:
-      - heu51xo8
-      - DIRECT
+      - "DIRECT"
 
+  - name: "🚀 Прокси (Reality)"
+    type: select
+    proxies:
+      - "🔒 Reality-VLESS"
+
+  - name: "🛡️ Блокировка"
+    type: select
+    proxies:
+      - "⛔ REJECT"
+      - "✅ DIRECT"
+
+# 📜 Правила (оптимизированы)
 rules:
-  - DOMAIN-SUFFIX,youtube.com,YouTube-Proxy
-  - DOMAIN-SUFFIX,ytimg.com,YouTube-Proxy
-  - DOMAIN-KEYWORD,youtube,YouTube-Proxy
-  - DOMAIN-KEYWORD,ytimg,YouTube-Proxy
-  - MATCH,DIRECT
+  # 1️⃣ Российские сервисы напрямую
+  - GEOIP,RU,🎯 Прямое подключение
+  - DOMAIN-SUFFIX,ru,🎯 Прямое подключение
+  - DOMAIN-SUFFIX,рф,🎯 Прямое подключение
+  - DOMAIN-SUFFIX,sberbank.ru,🎯 Прямое подключение
+  - DOMAIN-SUFFIX,tinkoff.ru,🎯 Прямое подключение
 
+  # 2️⃣ Заблокированные РКН сайты
+  - RULE-SET,BlockedSites,🚀 Прокси (Reality)
+
+  # 3️⃣ Блокировка рекламы
+  - RULE-SET,BanAD,🛡️ Блокировка
+  - RULE-SET,BanProgramAD,🛡️ Блокировка
+
+  # 4️⃣ Остальное - напрямую
+  - MATCH,🎯 Прямое подключение
