@@ -11,30 +11,36 @@ dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
-  prefer-h3: true  # Ускорит DNS (опционально)
+  prefer-h3: true
   nameserver:
-    - tls://77.88.8.8  # Яндекс (DoT)
-    - https://dns.yandex.ru/dns-query  # Яндекс (DoH)
+    - tls://77.88.8.8
+    - https://dns.yandex.ru/dns-query
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4  # Блокирует все IPv6-резолвы (AAAA)
   fake-ip-filter:
     - "*.ru"
     - "*.рф"
     - "*.local"
     - "*.sber*"
     - "*.tinkoff*"
-    
 
-# 🚇 TUN (обязательно в России)
+# 🚇 TUN (для обхода DPI)
 tun:
   enable: true
   auto-route: true
   auto-detect-interface: true
-  stack: system  # Или "gvisor", если используется
+  stack: system
   dns-hijack:
     - 77.88.8.8:53
-  # Добавьте это:
   system-filter:
-    - "0.0.0.0/0"  # Разрешить только IPv4
-    - "::/0 reject"  # Блокировать IPv6
+    - "0.0.0.0/0"       # Только IPv4
+    - "::/0 reject"     # Явно запрещаем IPv6
+
 
 # 📦 Rule Providers
 rule-providers:
@@ -113,6 +119,7 @@ rules:
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
