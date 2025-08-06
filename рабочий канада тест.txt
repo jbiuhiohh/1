@@ -70,7 +70,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "Reality-VLESS"
+      - "y478ws8q"
 
   - name: "BLOCK_ADS"
     type: select
@@ -96,6 +96,7 @@ rules:
 
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
