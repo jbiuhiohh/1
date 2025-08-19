@@ -1,4 +1,4 @@
-# 🌐 Основные настройки 
+ # 🌐 Основные настройки 
 mixed-port: 7890
 ipv6: false
 allow-lan: false
@@ -6,26 +6,25 @@ mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
 
-# 🔍 DNS (оптимизировано для РФ, быстрый Cloudflare)
+# 🔍 DNS (оптимизировано для РФ)
 dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
   nameserver:
-    - 1.1.1.1
-    - 1.0.0.1
-  fallback:
+    - 77.88.8.8
     - 8.8.8.8
+  fallback:
+    - 1.1.1.1
   fallback-filter:
     geoip: true
 
-# 🚇 TUN (gVisor + MTU для стабильности)
 tun:
   enable: true
   stack: gvisor
-  mtu: 1400
   auto-route: true
   auto-detect-interface: true
+
 
 
 # 📦 Rule Providers
