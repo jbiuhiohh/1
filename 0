@@ -56,7 +56,7 @@ rule-providers:
 
 # 🛰️ Прокси-сервер
 proxies:
-  - name: "PROXY"
+  - name: "vless-vision"
     type: vless
     server: "138.124.117.94"
     port: 443
