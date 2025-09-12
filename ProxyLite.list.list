@@ -1,34 +1,7 @@
 # Мой лист
 
-# Основные домены YouTube
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtube.googleapis.com
-DOMAIN-SUFFIX,youtubei.googleapis.com
-DOMAIN-SUFFIX,youtubekids.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,yt.be
-
-# Видео и CDN
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,manifest.googlevideo.com
-
-# Изображения и миниатюры
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,yt3.ggpht.com
-DOMAIN-SUFFIX,i.ytimg.com
-DOMAIN-SUFFIX,s.ytimg.com
-
-
-
-
-SRC-IP-CIDR,138.124.117.94/32
-DST-PORT,23575
 
 # Telegram
-
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telegra.ph
@@ -36,7 +9,6 @@ DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telesco.pe
 IP-CIDR,91.108.0.0/16,no-resolve
-IP-CIDR,95.161.64.0/20,no-resolve
 IP-CIDR,109.239.140.0/24,no-resolve
 IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
@@ -70,105 +42,152 @@ DOMAIN-SUFFIX,aeza.net
 DOMAIN-SUFFIX,wiki.aeza.net
 
 
-# AI
-DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,claude
-DOMAIN-KEYWORD,openai
-DOMAIN,ai.google.dev
-DOMAIN,api.githubcopilot.com
-DOMAIN,api.groq.com
-DOMAIN,api.together.xyz
-DOMAIN,bard.google.com
-DOMAIN,console.groq.com
-DOMAIN,copilot-proxy.githubusercontent.com
-DOMAIN,gemini.google.com
-DOMAIN,generativelanguage.googleapis.com
-DOMAIN,sydney.bing.com
-DOMAIN-SUFFIX,ai.azure.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,copilot.cloud.microsoft
-DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,grazie.ai
-DOMAIN-SUFFIX,grazie.aws.intellij.net
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,mistral.ai
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,sora.com
-
-
-
-
-# 国外域名关键字
-
-
-
-DOMAIN-KEYWORD,instagram
-DOMAIN-KEYWORD,porn
-DOMAIN-KEYWORD,sci-hub
-DOMAIN-KEYWORD,spotify
-DOMAIN-KEYWORD,telegram
-DOMAIN-KEYWORD,youtube
-
-
-
 # Claude
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,anthropic.com
 
+# Developer 开发者常用国外网站、镜像和论坛
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,elastic.co
+DOMAIN-SUFFIX,elastic.com
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,jitpack.io
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,mvnrepository.com
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redhat.com
+DOMAIN-SUFFIX,sonatype.org
+DOMAIN-SUFFIX,sourcegraph.com
+DOMAIN-SUFFIX,spring.io
+DOMAIN-SUFFIX,spring.net
+DOMAIN-SUFFIX,stackoverflow.com
 
+# Docker
+DOMAIN,d1q6f0aelx0por.cloudfront.net
+DOMAIN,d2wy8f7a9ursnm.cloudfront.net
+DOMAIN,d36jcksde1wxzq.cloudfront.net
+DOMAIN-SUFFIX,compose-spec.io
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,dockerhub.com
 
-# Основные IP-диапазоны
+# Discord
+DOMAIN-SUFFIX,discord.co
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+
+# Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-SUFFIX,fbcdn.net
+IP-CIDR,31.13.24.0/21,no-resolve
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,45.64.40.0/22,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.63.176.0/20,no-resolve
+IP-CIDR,69.171.224.0/19,no-resolve
+IP-CIDR,74.119.76.0/22,no-resolve
+IP-CIDR,103.4.96.0/22,no-resolve
+IP-CIDR,129.134.0.0/17,no-resolve
+IP-CIDR,157.240.0.0/17,no-resolve
+IP-CIDR,173.252.64.0/18,no-resolve
+IP-CIDR,179.60.192.0/22,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
+IP-CIDR,204.15.20.0/22,no-resolve
+
+# Github
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubapp.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubusercontent.com
+
+# Google
+DOMAIN-SUFFIX,1e100.net
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,app-measurement.net
+DOMAIN-SUFFIX,g.co
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,goo.gl
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.cn
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,gvt0.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
 IP-CIDR,74.125.0.0/16,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
 
-
+# GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
+IP-CIDR,120.232.181.162/32,no-resolve
+IP-CIDR,120.241.147.226/32,no-resolve
+IP-CIDR,120.253.253.226/32,no-resolve
+IP-CIDR,120.253.255.162/32,no-resolve
+IP-CIDR,120.253.255.34/32,no-resolve
+IP-CIDR,120.253.255.98/32,no-resolve
+IP-CIDR,180.163.150.162/32,no-resolve
+IP-CIDR,180.163.150.34/32,no-resolve
+IP-CIDR,180.163.151.162/32,no-resolve
+IP-CIDR,180.163.151.34/32,no-resolve
+IP-CIDR,203.208.39.0/24,no-resolve
+IP-CIDR,203.208.40.0/24,no-resolve
+IP-CIDR,203.208.41.0/24,no-resolve
+IP-CIDR,203.208.43.0/24,no-resolve
+IP-CIDR,203.208.50.0/24,no-resolve
+IP-CIDR,220.181.174.162/32,no-resolve
+IP-CIDR,220.181.174.226/32,no-resolve
+IP-CIDR,220.181.174.34/32,no-resolve
 
 # Instagram
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,instagr.am
 
-
 # OpenAi
-DOMAIN-KEYWORD,openai
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,challenges.cloudflare.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
 
+# OneDrive
+DOMAIN-KEYWORD,1drv
+DOMAIN-KEYWORD,onedrive
+DOMAIN-KEYWORD,skydrive
+DOMAIN-SUFFIX,livefilestore.com
+DOMAIN-SUFFIX,oneclient.sfx.ms
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-SUFFIX,photos.live.com
+DOMAIN-SUFFIX,skydrive.wns.windows.com
+DOMAIN-SUFFIX,spoprod-a.akamaihd.net
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN-SUFFIX,storage.msn.com
+#DOMAIN-SUFFIX,aria.microsoft.com
 
-
+# Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
 # Porn
-
 DOMAIN-KEYWORD,porn
-DOMAIN-SUFFIX,ru.xhamster.com
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,bcvcdn.com
@@ -191,12 +210,97 @@ DOMAIN-SUFFIX,xnxx.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,ypncdn.com
-DOMAIN-SUFFIX,xvideos2.com
 
 # Zoom
 DOMAIN-SUFFIX,zoom.us
 DOMAIN-SUFFIX,zoomgov.com
 
 
+# YouTube
+USER-AGENT,*youtube*
+USER-AGENT,YouTube*
+USER-AGENT,com.google.ios.youtube*
+DOMAIN-KEYWORD,youtube
+DOMAIN,youtubei.googleapis.com
+DOMAIN,yt3.ggpht.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,withyoutube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,youtubegaming.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
 
+# YouTubeMusic
+USER-AGENT,*YouTubeMusic*
+USER-AGENT,*com.google.ios.youtubemusic*
+USER-AGENT,YouTubeMusic*
+USER-AGENT,com.google.ios.youtubemusic*
+DOMAIN,music.youtube.com
 
+# OpenAi
+DOMAIN-KEYWORD,openai
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+
+# AI
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,openai
+DOMAIN,ai.google.dev
+DOMAIN,aistudio.google.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.groq.com
+DOMAIN,api.together.xyz
+DOMAIN,bard.google.com
+DOMAIN,console.groq.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,gemini.google.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,sydney.bing.com
+DOMAIN-SUFFIX,ai.azure.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,copilot.cloud.microsoft
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,sora.com
