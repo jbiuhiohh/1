@@ -1,5 +1,29 @@
 # Мой лист
 
+# Основные домены YouTube
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtube.googleapis.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
+
+# Видео и CDN
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,manifest.googlevideo.com
+
+# Изображения и миниатюры
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,i.ytimg.com
+DOMAIN-SUFFIX,s.ytimg.com
+
+
+
+
 SRC-IP-CIDR,138.124.117.94/32
 DST-PORT,23575
 
@@ -291,11 +315,7 @@ DOMAIN-SUFFIX,discordapp.net
 
 
 
-# Github
 
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,ytimg.com
 
   
 # Основные IP-диапазоны
@@ -364,23 +384,6 @@ DOMAIN-SUFFIX,xvideos2.com
 
 
 
-# YouTube
-
-DOMAIN-KEYWORD,youtube
-DOMAIN,youtubei.googleapis.com
-DOMAIN,yt3.ggpht.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,yt1s.com
-DOMAIN-SUFFIX,youtubeproxy.ninja
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtube.googleapis.com
-DOMAIN-SUFFIX,youtubekids.com
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
 
 
 
