@@ -247,7 +247,6 @@ DOMAIN-SUFFIX,vox-cdn.com
 
 
 # BBC
-DOMAIN-KEYWORD,uk-live
 DOMAIN-SUFFIX,bbc.co
 DOMAIN-SUFFIX,bbc.com
 
@@ -376,6 +375,7 @@ DOMAIN-SUFFIX,storage.msn.com
 
 # Porn
 DOMAIN-KEYWORD,porn
+DOMAIN-SUFFIX,ru.xhamster.com
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,bcvcdn.com
