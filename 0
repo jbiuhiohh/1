@@ -54,6 +54,7 @@ rule-providers:
     interval: 3600
 
 
+
 # 🛰️ Прокси-сервер
 proxies:
   - name: "vless-vision"
@@ -63,10 +64,10 @@ proxies:
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
     network: "tcp"
     tls: true
-    servername: "google.com"
+    servername: "yandex.net"  # ← ИЗМЕНИТЬ (было google.com)
     reality-opts:
-      public-key: "K-Jxq2nBeHCrgiQDO3R4zqJzbuy7oWqDJ9D32P-LL2c"
-      short-id: "a5500427"
+      public-key: "1Ok5QM2Nrf11DGCBRSKjSm3__-IxIA5qjcXgO53MP0w"  # ← ИЗМЕНИТЬ (было K-Jxq2nBeHCrgiQDO3R4zqJzbuy7oWqDJ9D32P-LL2c)
+      short-id: "abe1b3"  # ← ИЗМЕНИТЬ (было a5500427)
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     udp: true
