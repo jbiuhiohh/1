@@ -9,14 +9,12 @@ external-controller: 127.0.0.1:9090
 dns:
   enable: true
   ipv6: false
-  # fake-ip скрывает реальные домены от локальной сети
   enhanced-mode: fake-ip
-  # Используем DoH (DNS over HTTPS) — провайдер не сможет легко подменить
   nameserver:
+    - https://dns.cloudflare.com/dns-query
     - https://dns.adguard-dns.com/dns-query
-    - https://cloudflare-dns.com/dns-query
   fallback:
-    - https://dns.google/dns-query
+    - tls://1.1.1.1:853
   fallback-filter:
     geoip: true
 
@@ -24,29 +22,26 @@ tun:
   enable: true
   stack: gvisor
   auto-route: true
-  auto-detect-interface: true
-  # Перехватываем системный DNS (весь 53 порт) и гоним через туннель
   dns-hijack:
     - 0.0.0.0:53
 
 proxies:
-  - name: "vless-vision"
+  - name: "vless-vision-ws"
     type: vless
     server: "138.124.117.94"
     port: 443
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
-    network: "tcp"
+    network: ws
     tls: true
-    # Не меняем servername
     servername: "goya.rutube.ru"
-    # если провайдер ломает TLS, можно попробовать включить insecure
-    insecure: true
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "exM3D87T2lKfDz2Nae2wiO0TqCpMoOG_Lf8560OW9mM"
       short-id: "abe1b3"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    udp: true
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "goya.rutube.ru"
 
 
 
