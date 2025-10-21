@@ -2,7 +2,7 @@
 mixed-port: 7890
 allow-lan: true
 ipv6: false
-mode: global               # все запросы идут через прокси
+mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
@@ -35,16 +35,16 @@ proxies:
     type: vless
     server: 138.124.117.94
     port: 443
-    uuid: 0cf76b87-4ef7-4d14-922d-aec8b3cd21fe
+    uuid: 3f1a34f6-5f89-4243-a7eb-718fcc191f12
     network: tcp
     tls: true
     security: reality
     servername: max.ru
     reality-opts:
-      public-key: LrIe4zIEqffbxA_7_Fzy6Gma4q3LQTtkz07-ihNWAh0
-      short-id: 39af55bf
+      public-key: abJcVVw2TyJu5X03Z2gRIOsjeVniFxtRL-N_BxK6LF0
+      short-id: 675b0b92
     client-fingerprint: chrome
-    flow: none
+    flow: xtls-rprx-vision
     udp: true
 
 # 🎚 Группы
@@ -55,6 +55,6 @@ proxy-groups:
       - "vless-test"
       - "DIRECT"
 
-# 📜 Правила (всё через PROXY)
+# 📜 Правила
 rules:
   - MATCH,PROXY
