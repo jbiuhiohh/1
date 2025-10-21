@@ -6,7 +6,7 @@ mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS (универсальный fake-ip)
+# 🌐 DNS (ускоренный, универсальный fake-ip)
 dns:
   enable: true
   ipv6: false
@@ -17,15 +17,15 @@ dns:
   nameserver:
     - https://dns.google/dns-query
     - https://1.1.1.1/dns-query
-  fallback:
-    - https://cloudflare-dns.com/dns-query
+    - https://77.88.8.8/dns-query  # Яндекс DNS
+    - https://9.9.9.9/dns-query    # Quad9
   fallback-filter:
     geoip: true
 
 # 🌀 TUN (для полного захвата трафика)
 tun:
   enable: true
-  stack: gvisor
+  stack: system       # тестовый вариант: может быть быстрее gvisor
   auto-route: true
   auto-detect-interface: true
 
