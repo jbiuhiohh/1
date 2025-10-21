@@ -55,7 +55,7 @@ rule-providers:
 
 
 
-# 🛰️ Прокси-сервер
+# 🛰 Прокси-сервер
 proxies:
   - name: "vless-vision"
     type: vless
@@ -64,10 +64,10 @@ proxies:
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
     network: "tcp"
     tls: true
-    servername: "yandex.net"
     reality-opts:
-      public-key: "1Ok5QM2Nrf11DGCBRSKjSm3__-IxIA5qjcXgO53MP0w" 
+      public-key: "exM3D87T2lKfDz2Nae2wiO0TqCpMoOG_Lf8560OW9mM"
       short-id: "abe1b3"
+    servername: "goya.rutube.ru"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     udp: true
