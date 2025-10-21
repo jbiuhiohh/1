@@ -64,10 +64,13 @@ proxies:
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
     network: "tcp"
     tls: true
+    # servername обновлён по vless-ссылке
+    servername: "api.avito.ru"
+    # безопасно оставить false, можно временно включить для отладки
+    insecure: false
     reality-opts:
-      public-key: "exM3D87T2lKfDz2Nae2wiO0TqCpMoOG_Lf8560OW9mM"
-      short-id: "abe1b3"
-    servername: "goya.rutube.ru"
+      public-key: "-pPAsXzsBgP1yK9PrdoAFgK200ehqpCx56o1w9nC9Do"
+      short-id: "a7c2aa25"
     client-fingerprint: "chrome"
     flow: "xtls-rprx-vision"
     udp: true
