@@ -25,7 +25,7 @@ dns:
 # 🌀 TUN (для полного захвата трафика)
 tun:
   enable: true
-  stack: system       # тестовый вариант: может быть быстрее gvisor
+  stack: gvisor      
   auto-route: true
   auto-detect-interface: true
 
