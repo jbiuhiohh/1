@@ -44,8 +44,7 @@ proxies:
       public-key: LrIe4zIEqffbxA_7_Fzy6Gma4q3LQTtkz07-ihNWAh0
       short-id: 39af55bf
     client-fingerprint: chrome
-    flow: xtls-rprx-vision
-
+    flow: none
     udp: true
 
 # 🎚 Группы
