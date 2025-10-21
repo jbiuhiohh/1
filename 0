@@ -62,18 +62,17 @@ proxies:
     server: "138.124.117.94"
     port: 443
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
-    network: "tcp"
+    network: tcp
     tls: true
-    # servername обновлён по vless-ссылке
-    servername: "api.avito.ru"
-    # безопасно оставить false, можно временно включить для отладки
-    insecure: false
+    security: reality
+    servername: "max.ru"             
     reality-opts:
-      public-key: "-pPAsXzsBgP1yK9PrdoAFgK200ehqpCx56o1w9nC9Do"
-      short-id: "a7c2aa25"
-    client-fingerprint: "chrome"
+      public-key: "LrIe4zIEqffbxA_7_Fzy6Gma4q3LQTtkz07-ihNWAh0"   
+      short-id: "39af55bf"            
+    client-fingerprint: "chrome"     
     flow: "xtls-rprx-vision"
     udp: true
+ 
 
 # 🎚️ Группы прокси
 proxy-groups:
