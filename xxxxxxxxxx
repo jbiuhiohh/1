@@ -6,6 +6,7 @@ mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
 
+# DNS (оптимизировано для обхода локальной подмены)
 dns:
   enable: true
   ipv6: false
@@ -18,30 +19,33 @@ dns:
   fallback-filter:
     geoip: true
 
+# TUN — форсируем DNS через туннель (чтобы провайдер не видел запросы)
 tun:
   enable: true
   stack: gvisor
   auto-route: true
+  auto-detect-interface: true
   dns-hijack:
     - 0.0.0.0:53
 
+# 🛰 Прокси-сервер
 proxies:
-  - name: "vless-vision-ws"
+  - name: "vless-vision"
     type: vless
     server: "138.124.117.94"
     port: 443
     uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
-    network: ws
+    network: "tcp"
     tls: true
+    # servername оставлен прежним
     servername: "goya.rutube.ru"
-    client-fingerprint: "chrome"
+    insecure: false              # можно временно поставить true для теста (не рекомендуется постоянно)
     reality-opts:
-      public-key: "exM3D87T2lKfDz2Nae2wiO0TqCpMoOG_Lf8560OW9mM"
+      public-key: "L51phH-qLvpt9IKs3qi8--OoTonP0mNlgiwkZi2AXRw"
       short-id: "abe1b3"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "goya.rutube.ru"
+    client-fingerprint: "chrome"
+    flow: "xtls-rprx-vision"
+    udp: true
 
 
 
