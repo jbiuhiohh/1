@@ -6,21 +6,36 @@ mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS (ускоренный, универсальный fake-ip)
 dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: fake-ip
+  enable: true          # Включаем DNS внутри Clash
+  ipv6: false           # IPv6 отключаем — только мешает и замедляет
+  enhanced-mode: redir-host   # Быстрее и стабильнее для YouTube/видео
+  listen: 0.0.0.0:53    # Позволяет Clash обрабатывать DNS-запросы локально (если роутер это поддерживает)
+
   default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
+    - 77.88.8.8          # Яндекс DNS — самый быстрый в РФ
+    - 1.1.1.1            # Cloudflare — быстрый и стабильный
+
   nameserver:
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
-    - https://77.88.8.8/dns-query  # Яндекс DNS
-    - https://9.9.9.9/dns-query    # Quad9
+    - https://1.1.1.1/dns-query     # Cloudflare DoH
+    - https://77.88.8.8/dns-query   # Яндекс DoH (низкий пинг)
+    - https://8.8.8.8/dns-query     # Google DoH (на случай ошибок)
+
+  fallback:
+    - https://dns.google/dns-query  # Запасной вариант
+    - https://9.9.9.9/dns-query     # Quad9 — фильтрует вредоносные сайты
+
   fallback-filter:
-    geoip: true
+    geoip: true          # РФ — напрямую, зарубежные — через прокси
+    geoip-code: RU       # Геолокация РФ
+    ipcidr:
+      - 127.0.0.0/8
+      - 192.168.0.0/16
+      - 10.0.0.0/8
+      - 172.16.0.0/12
+    domain:
+      - +.googlevideo.com
+      - +.youtube.com
 
 
 
