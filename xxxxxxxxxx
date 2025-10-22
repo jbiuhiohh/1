@@ -2,30 +2,29 @@
 mixed-port: 7890
 allow-lan: true
 ipv6: false
-mode: global
+mode: rule       # Режим правил
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS (ускоренный, универсальный fake-ip)
+# 🌐 DNS (оптимизировано для РФ)
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: fake-ip
+  enhanced-mode: redir-host   # быстрее для потокового видео
   default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
+    - 77.88.8.8      # Яндекс DNS
+    - 8.8.8.8        # Google DNS
   nameserver:
     - https://dns.google/dns-query
     - https://1.1.1.1/dns-query
-    - https://77.88.8.8/dns-query  # Яндекс DNS
-    - https://9.9.9.9/dns-query    # Quad9
+    - https://77.88.8.8/dns-query
   fallback-filter:
     geoip: true
 
-# 🌀 TUN (для полного захвата трафика)
+# 🌀 TUN (минимальная нагрузка)
 tun:
   enable: true
-  stack: gvisor      
+  stack: system       # меньше нагрузка, быстрее для видео
   auto-route: true
   auto-detect-interface: true
 
@@ -47,7 +46,7 @@ proxies:
     flow: xtls-rprx-vision
     udp: true
 
-# 🎚 Группы
+# 🎚️ Группы прокси
 proxy-groups:
   - name: "PROXY"
     type: select
@@ -57,4 +56,10 @@ proxy-groups:
 
 # 📜 Правила
 rules:
-  - MATCH,PROXY
+  # YouTube через прокси
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,ytimg.com,PROXY
+  - DOMAIN-KEYWORD,youtu.be,PROXY
+
+  # Остальное напрямую
+  - MATCH,DIRECT
