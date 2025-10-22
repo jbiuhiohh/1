@@ -2,29 +2,28 @@
 mixed-port: 7890
 allow-lan: true
 ipv6: false
-mode: rule       # Режим правил
+mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS (оптимизировано для РФ)
+# 🌐 DNS
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host   # быстрее для потокового видео
+  enhanced-mode: redir-host
   default-nameserver:
-    - 77.88.8.8      # Яндекс DNS
-    - 8.8.8.8        # Google DNS
+    - 77.88.8.8
+    - 8.8.8.8
   nameserver:
     - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
     - https://77.88.8.8/dns-query
   fallback-filter:
     geoip: true
 
-# 🌀 TUN (минимальная нагрузка)
+# 🌀 TUN
 tun:
   enable: true
-  stack: system       # меньше нагрузка, быстрее для видео
+  stack: system
   auto-route: true
   auto-detect-interface: true
 
@@ -46,6 +45,16 @@ proxies:
     flow: xtls-rprx-vision
     udp: true
 
+# 📦 Rule Providers
+rule-providers:
+  BlockedSites:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
+    format: "text"
+    path: "./ruleset/BlockedSites.yaml"
+    interval: 3600
+
 # 🎚️ Группы прокси
 proxy-groups:
   - name: "PROXY"
@@ -56,10 +65,8 @@ proxy-groups:
 
 # 📜 Правила
 rules:
-  # YouTube через прокси
-  - DOMAIN-SUFFIX,youtube.com,PROXY
-  - DOMAIN-SUFFIX,ytimg.com,PROXY
-  - DOMAIN-KEYWORD,youtu.be,PROXY
+  # Заблокированные РКН сайты (YouTube и др.) через прокси
+  - RULE-SET,BlockedSites,PROXY
 
   # Остальное напрямую
   - MATCH,DIRECT
