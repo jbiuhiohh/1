@@ -24,18 +24,18 @@ dns:
 
 # 🛰 Прокси
 proxies:
-  - name: "vless-test"
+  - name: "🇷🇺 Saint-Petersburg"
     type: vless
-    server: 138.124.117.94
+    server: spb.experced.fun
     port: 443
-    uuid: 3f1a34f6-5f89-4243-a7eb-718fcc191f12
+    uuid: c058185c-b048-46ff-9e16-87d3fe009274
     network: tcp
     tls: true
     security: reality
-    servername: max.ru
+    servername: spb.experced.fun
     reality-opts:
-      public-key: abJcVVw2TyJu5X03Z2gRIOsjeVniFxtRL-N_BxK6LF0
-      short-id: 675b0b92
+      public-key: qcGM3QHIMwbRxgsZiQwRn971T8udryUaswhCbA8BY1Y
+      short-id: b87b91d67a8f9cd2
     client-fingerprint: chrome
     flow: xtls-rprx-vision
     udp: true
@@ -71,7 +71,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "vless-test"
+      - "🇷🇺 Saint-Petersburg"
       - "DIRECT"   # <- теперь можно переключать в обход прокси
 
   - name: "BLOCK_ADS"
