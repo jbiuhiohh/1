@@ -96,7 +96,7 @@ proxy-groups:
 
 # 📜 Правила
 rules:
-  - DOMAIN-SUFFIX,x5.ru,DIRECT
+  - DOMAIN-SUFFIX,x5.ru,DIRECT,no-resolve
   # 1️⃣ Блокировка рекламы
   - RULE-SET,BanAD,BLOCK_ADS
   - RULE-SET,BanProgramAD,BLOCK_ADS 
