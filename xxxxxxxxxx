@@ -7,9 +7,9 @@ log-level: info
 external-controller: 127.0.0.1:9090
 
 dns:
-  enable: true          # Включаем DNS внутри Clash
+ 
   ipv6: false           # IPv6 отключаем — только мешает и замедляет
-  enhanced-mode: redir-host   # Быстрее и стабильнее для YouTube/видео
+
  
 
   
