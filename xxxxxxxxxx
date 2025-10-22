@@ -2,30 +2,27 @@
 mixed-port: 7890
 allow-lan: true
 ipv6: false
-mode: rule
+mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS
+# 🌐 DNS (ускоренный, универсальный fake-ip)
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   default-nameserver:
-    - 77.88.8.8
     - 8.8.8.8
+    - 1.1.1.1
   nameserver:
     - https://dns.google/dns-query
-    - https://77.88.8.8/dns-query
+    - https://1.1.1.1/dns-query
+    - https://77.88.8.8/dns-query  # Яндекс DNS
+    - https://9.9.9.9/dns-query    # Quad9
   fallback-filter:
     geoip: true
 
-# 🌀 TUN
-#tun:
- # enable: true
-  #stack: system
-  #auto-route: true
-  #auto-detect-interface: true
+
 
 # 🛰 Прокси
 proxies:
@@ -55,18 +52,44 @@ rule-providers:
     path: "./ruleset/BlockedSites.yaml"
     interval: 3600
 
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    format: "text"
+    path: "./ruleset/BanAD.yaml"
+    interval: 86400
+
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    format: "text"
+    path: "./ruleset/BanProgramAD.yaml"
+    interval: 3600
+
 # 🎚️ Группы прокси
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
       - "vless-test"
+      - "DIRECT"   # <- теперь можно переключать в обход прокси
+
+  - name: "BLOCK_ADS"
+    type: select
+    proxies:
+      - "REJECT"
       - "DIRECT"
 
 # 📜 Правила
 rules:
-  # Заблокированные РКН сайты (YouTube и др.) через прокси
+  # 1️⃣ Блокировка рекламы
+  - RULE-SET,BanAD,BLOCK_ADS
+  - RULE-SET,BanProgramAD,BLOCK_ADS 
+
+  # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
 
-  # Остальное напрямую
+  # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
