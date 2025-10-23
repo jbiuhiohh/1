@@ -6,46 +6,60 @@ mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - "223.5.5.5"
+    - "114.114.114.114"
+  nameserver:
+    - "223.5.5.5"
+    - "114.114.114.114"
+    - "119.29.29.29"
+    - "180.76.76.76"
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
 
 # 🛰 Прокси
 proxies:
-  - name: "🇷🇺 test"
+  - name: "🇷🇺 Test"
     type: vless
-    server: stroyinvest43.ru
+    server: 138.124.117.94
     port: 443
-    uuid: 0f7ef369-decb-4c1b-a306-3dadb87bd310
+    uuid: 4dade68c-bc4f-4ca7-b888-60fd41e41472
     network: tcp
     tls: true
     security: reality
     reality-opts:
-      public-key: kKLCkLDlcU4oJWZ56AZ-RtuYH8cFVLoZWLlXFCmDskE
-      short-id: 883c16
+      public-key: Dk-xIRmuhj32koGPy_OinCP98n5oAVFJceetqLYns0Q
+      short-id: 0e
     servername: stroyinvest43.ru
-    client-fingerprint: firefox
+    client-fingerprint: chrome
     flow: xtls-rprx-vision
     udp: true
+    spx: "/"
 
 # 📦 Rule Providers
 rule-providers:
   BlockedSites:
-    type: "http"
-    behavior: "classical"
+    type: http
+    behavior: classical
     url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
-    format: "text"
+    format: text
     path: "./ruleset/BlockedSites.yaml"
     interval: 3600
   BanAD:
-    type: "http"
-    behavior: "classical"
+    type: http
+    behavior: classical
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-    format: "text"
+    format: text
     path: "./ruleset/BanAD.yaml"
     interval: 86400
   BanProgramAD:
-    type: "http"
-    behavior: "classical"
+    type: http
+    behavior: classical
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-    format: "text"
+    format: text
     path: "./ruleset/BanProgramAD.yaml"
     interval: 3600
 
@@ -54,7 +68,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "🇷🇺 test"
+      - "🇷🇺 Test"
       - "DIRECT"
   - name: "BLOCK_ADS"
     type: select
