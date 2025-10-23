@@ -22,17 +22,17 @@ dns:
 
 # 🛰 Прокси
 proxies:
-  - name: "🇷🇺 jivs3466"
+  - name: "🇷🇺 test"
     type: vless
     server: stroyinvest43.ru
-    port: 433
-    uuid: 05eb9d84-160f-4e31-b159-64147d568413
+    port: 443
+    uuid: 0f7ef369-decb-4c1b-a306-3dadb87bd310
     network: tcp
     tls: true
     security: reality
     reality-opts:
-      public-key: sYBh5rTr8vyGyT_kaUL0ymZtiisHNWFC-Gye2xQg-Ss
-      short-id: dc953efa3fb9917c
+      public-key: kKLCkLDlcU4oJWZ56AZ-RtuYH8cFVLoZWLlXFCmDskE
+      short-id: 883c16
     servername: stroyinvest43.ru
     client-fingerprint: firefox
     flow: xtls-rprx-vision
@@ -67,7 +67,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "🇷🇺 jivs3466"
+      - "🇷🇺 test"
       - "DIRECT"
   - name: "BLOCK_ADS"
     type: select
