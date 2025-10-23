@@ -10,33 +10,31 @@ dns:
   enable: true
   ipv6: false
   default-nameserver:
-  - "223.5.5.5"
-  - "114.114.114.114"
+    - "223.5.5.5"
+    - "114.114.114.114"
   nameserver:
-  - "223.5.5.5"
-  - "114.114.114.114"
-  - "119.29.29.29"
-  - "180.76.76.76"
+    - "223.5.5.5"
+    - "114.114.114.114"
+    - "119.29.29.29"
+    - "180.76.76.76"
   enhanced-mode: "fake-ip"
   fake-ip-range: "198.18.0.1/16"
 
-  
-
 # 🛰 Прокси
 proxies:
-  - name: "🇷🇺 Saint-Petersburg"
+  - name: "🇷🇺 zaebok"
     type: vless
-    server: spb.experced.fun
+    server: 138.124.117.94
     port: 443
-    uuid: c058185c-b048-46ff-9e16-87d3fe009274
+    uuid: b040e93a-2224-41c3-82ba-ffe96e019d65
     network: tcp
     tls: true
     security: reality
-    servername: spb.experced.fun
     reality-opts:
-      public-key: qcGM3QHIMwbRxgsZiQwRn971T8udryUaswhCbA8BY1Y
-      short-id: b87b91d67a8f9cd2
-    client-fingerprint: chrome
+      public-key: 6GHUjXYpKf79UWmHUbfU-S234_kt9QTi-MoPxmffonM
+      short-id: fa
+    servername: max.ru
+    client-fingerprint: firefox
     flow: xtls-rprx-vision
     udp: true
 
@@ -49,7 +47,6 @@ rule-providers:
     format: "text"
     path: "./ruleset/BlockedSites.yaml"
     interval: 3600
-
   BanAD:
     type: "http"
     behavior: "classical"
@@ -57,7 +54,6 @@ rule-providers:
     format: "text"
     path: "./ruleset/BanAD.yaml"
     interval: 86400
-
   BanProgramAD:
     type: "http"
     behavior: "classical"
@@ -66,14 +62,13 @@ rule-providers:
     path: "./ruleset/BanProgramAD.yaml"
     interval: 3600
 
-# 🎚️ Группы прокси
+# 🎚 Группы прокси
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "🇷🇺 Saint-Petersburg"
-      - "DIRECT"   # <- теперь можно переключать в обход прокси
-
+      - "🇷🇺 zaebok"
+      - "DIRECT"   # <- можно переключать в обход прокси
   - name: "BLOCK_ADS"
     type: select
     proxies:
@@ -82,13 +77,10 @@ proxy-groups:
 
 # 📜 Правила
 rules:
-
   # 1️⃣ Блокировка рекламы
   - RULE-SET,BanAD,BLOCK_ADS
-  - RULE-SET,BanProgramAD,BLOCK_ADS 
-
+  - RULE-SET,BanProgramAD,BLOCK_ADS
   # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
-
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
