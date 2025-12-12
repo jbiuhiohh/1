@@ -1,97 +1,52 @@
-# ============================================
-# 🛰 GLOBAL → ВСЕ ЧЕРЕЗ ПИТЕР (С FAILOVER)
-# ============================================
-
+# 🌐 Основные настройки
 mixed-port: 7890
 allow-lan: true
-ipv6: false
-mode: global
+mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# ============================================
-# 🌐 DNS (Fake-IP)
-# ============================================
-
+# 📡 DNS (упрощённый, стабильный)
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: fake-ip
-
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-
+  enhanced-mode: redir-host
   nameserver:
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
-    - https://77.88.8.8/dns-query
-    - https://9.9.9.9/dns-query
+    - 1.1.1.1
+    - 8.8.8.8
 
-  fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-
-# ============================================
-# 🌀 TUN
-# ============================================
-
-tun:
-  enable: true
-  stack: gvisor
-  auto-route: true
-  auto-detect-interface: true
-
-# ============================================
-# 🛰 Прокси (ПИТЕР)
-# ============================================
-
+# 🛰 Твой прокси Питер
 proxies:
-  - name: "Piter-Reality"
+  - name: "Piter-VLESS"
     type: vless
     server: ru.stroyinvest43.ru
     port: 443
     uuid: 5e3d66ef-20c7-46f6-80f1-46a2cd438e8c
-
     network: tcp
     tls: true
     security: reality
-
     servername: ru.stroyinvest43.ru
-
     reality-opts:
       public-key: 9ktdce-QgJHgOAccqV4IfxxOM5Bv5CaJDFcJHzvMI2w
       short-id: 505bd1a78a37a4
       spider-x: /
-
     client-fingerprint: chrome
     flow: xtls-rprx-vision
     udp: true
 
-# ============================================
-# 💠 Прокси-группы (С АВТО-FALLBACK)
-# ============================================
-
+# 🌍 Группы выбора
 proxy-groups:
-  # 🎯 Глобальная группа
-  - name: "GLOBAL"
-    type: fallback
+  - name: "🛰 PROXY"
+    type: select
     proxies:
-      - "Piter-Reality"
-      - "DIRECT"
-    interval: 5
-    timeout: 1500
-    lazy: true
-    health-check:
-      enable: true
-      interval: 5
-      lazy: true
-      url: http://cp.cloudflare.com/generate_204
+      - Piter-VLESS
+      - DIRECT
 
-# ============================================
-# 🚦 Маршруты
-# ============================================
+  - name: "🌍 GLOBAL"
+    type: select
+    proxies:
+      - 🛰 PROXY
+      - DIRECT
 
+# 📌 Правила (минимум)
 rules:
-  - MATCH,GLOBAL
+  - MATCH,🌍 GLOBAL
