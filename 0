@@ -1,4 +1,7 @@
-# 🌍 Основные настройки
+# ============================================
+# 🛰 GLOBAL → ВСЕ ЧЕРЕЗ ПИТЕР (С FAILOVER)
+# ============================================
+
 mixed-port: 7890
 allow-lan: true
 ipv6: false
@@ -6,96 +9,89 @@ mode: global
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🌐 DNS (ускоренный, универсальный fake-ip)
+# ============================================
+# 🌐 DNS (Fake-IP)
+# ============================================
+
 dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
+
   default-nameserver:
     - 8.8.8.8
     - 1.1.1.1
+
   nameserver:
     - https://dns.google/dns-query
     - https://1.1.1.1/dns-query
-    - https://77.88.8.8/dns-query  # Яндекс DNS
-    - https://9.9.9.9/dns-query    # Quad9
-  fallback-filter:
-    geoip: true
+    - https://77.88.8.8/dns-query
+    - https://9.9.9.9/dns-query
 
-# 🌀 TUN (для полного захвата трафика)
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
+
+# ============================================
+# 🌀 TUN
+# ============================================
+
 tun:
   enable: true
-  stack: gvisor      
+  stack: gvisor
   auto-route: true
   auto-detect-interface: true
 
-# 🛰 Прокси
+# ============================================
+# 🛰 Прокси (ПИТЕР)
+# ============================================
+
 proxies:
-  - name: "vless-test"
+  - name: "Piter-Reality"
     type: vless
-    server: 138.124.117.94
+    server: ru.stroyinvest43.ru
     port: 443
-    uuid: 3f1a34f6-5f89-4243-a7eb-718fcc191f12
+    uuid: 5e3d66ef-20c7-46f6-80f1-46a2cd438e8c
+
     network: tcp
     tls: true
     security: reality
-    servername: max.ru
+
+    servername: ru.stroyinvest43.ru
+
     reality-opts:
-      public-key: abJcVVw2TyJu5X03Z2gRIOsjeVniFxtRL-N_BxK6LF0
-      short-id: 675b0b92
+      public-key: 9ktdce-QgJHgOAccqV4IfxxOM5Bv5CaJDFcJHzvMI2w
+      short-id: 505bd1a78a37a4
+      spider-x: /
+
     client-fingerprint: chrome
     flow: xtls-rprx-vision
     udp: true
 
-# 📦 Rule Providers
-rule-providers:
-  BlockedSites:
-    type: "http"
-    behavior: "classical"
-    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
-    format: "text"
-    path: "./ruleset/BlockedSites.yaml"
-    interval: 3600
+# ============================================
+# 💠 Прокси-группы (С АВТО-FALLBACK)
+# ============================================
 
-  BanAD:
-    type: "http"
-    behavior: "classical"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-    format: "text"
-    path: "./ruleset/BanAD.yaml"
-    interval: 86400
-
-  BanProgramAD:
-    type: "http"
-    behavior: "classical"
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
-    format: "text"
-    path: "./ruleset/BanProgramAD.yaml"
-    interval: 3600
-
-# 🎚️ Группы прокси
 proxy-groups:
-  - name: "PROXY"
-    type: select
+  # 🎯 Глобальная группа
+  - name: "GLOBAL"
+    type: fallback
     proxies:
-      - "vless-test"
-      - "DIRECT"   # <- теперь можно переключать в обход прокси
-
-  - name: "BLOCK_ADS"
-    type: select
-    proxies:
-      - "REJECT"
+      - "Piter-Reality"
       - "DIRECT"
+    interval: 5
+    timeout: 1500
+    lazy: true
+    health-check:
+      enable: true
+      interval: 5
+      lazy: true
+      url: http://cp.cloudflare.com/generate_204
 
-# 📜 Правила
+# ============================================
+# 🚦 Маршруты
+# ============================================
+
 rules:
-  # 1️⃣ Блокировка рекламы
-  - RULE-SET,BanAD,BLOCK_ADS
-  - RULE-SET,BanProgramAD,BLOCK_ADS 
-
-  # 2️⃣ Заблокированные РКН сайты
-  - RULE-SET,BlockedSites,PROXY
-
-  # 4️⃣ Остальное - напрямую
-  - MATCH,DIRECT
-
+  - MATCH,GLOBAL
