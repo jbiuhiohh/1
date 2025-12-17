@@ -3,6 +3,8 @@
 ############
 ###dpi-checkers/ru/tcp-16-20/####
 
+
+DOMAIN-SUFFIX,stat.ripe.net
 DOMAIN-SUFFIX,img.wzstats.gg
 DOMAIN-SUFFIX,genshin.jmp.blue
 DOMAIN-SUFFIX,api.frankfurter.dev
