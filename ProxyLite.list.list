@@ -185,13 +185,23 @@ DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,dockerhub.com
 
-# Discord
-DOMAIN-SUFFIX,discord.co
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discord.media
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
+# Discord (полностью заблокирован в РФ)
+# Основные домены платформы
+DOMAIN-SUFFIX,discord.co,PROXY
+DOMAIN-SUFFIX,discord.com,PROXY
+DOMAIN-SUFFIX,discord.gg,PROXY
+DOMAIN-SUFFIX,discord.media,PROXY
+DOMAIN-SUFFIX,discordapp.com,PROXY
+DOMAIN-SUFFIX,discordapp.net,PROXY
+
+# Ключевые CDN и медиа-хостинги (для голоса, видео, загрузки файлов)
+DOMAIN-SUFFIX,discordcdn.com,PROXY
+DOMAIN-SUFFIX,cdn.discordapp.com,PROXY
+
+# Дополнительные служебные домены
+DOMAIN-SUFFIX,discordstatus.com,PROXY
+DOMAIN-SUFFIX,discord.gift,PROXY
+DOMAIN-SUFFIX,gateway.discord.gg,PROXY
 
 # Facebook
 DOMAIN-SUFFIX,x.com
