@@ -206,6 +206,20 @@ DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,cdn.whatsapp.net
+DOMAIN-SUFFIX,mmg.whatsapp.net
+DOMAIN-SUFFIX,media.whatsapp.net
+DOMAIN-SUFFIX,web.whatsapp.com
+
+  # Meta IP (Calls)
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.63.176.0/20,no-resolve
+IP-CIDR,157.240.0.0/16,no-resolve
+IP-CIDR,129.134.0.0/16,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
 
 
 
