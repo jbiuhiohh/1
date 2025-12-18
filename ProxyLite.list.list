@@ -188,6 +188,20 @@ IP-CIDR,173.194.0.0/16,no-resolve
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-KEYWORD,instagram
+DOMAIN-SUFFIX,graph.instagram.com
+DOMAIN-SUFFIX,i.instagram.com
+DOMAIN-SUFFIX,instagramstatic-a.akamaihd.net
+DOMAIN-SUFFIX,instagramimages-a.akamaihd.net
+DOMAIN-SUFFIX,instagram.fbni1-1.fna.fbcdn.net
+DOMAIN-SUFFIX,help.instagram.com
+
+
+
 
 # OpenAi
 DOMAIN-SUFFIX,openai.com
