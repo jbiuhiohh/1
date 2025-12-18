@@ -55,6 +55,7 @@ DOMAIN-SUFFIX,help.instagram.com
 # YouTube
 DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,ytimg
+DOMAIN-KEYWORD,googlevideo
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
