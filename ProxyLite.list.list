@@ -53,42 +53,21 @@ DOMAIN-SUFFIX,help.instagram.com
 
 
 # YouTube
-DOMAIN-KEYWORD,youtube
-DOMAIN-KEYWORD,ytimg
-DOMAIN-KEYWORD,googlevideo
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,withyoutube.com
+DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,gvt0.com, .gvt1.com, .gvt2.com, .gvt3.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-KEYWORD,youtube
+DOMAIN-KEYWORD,googlevideo
+DOMAIN-SUFFIX,withyoutube.com
 DOMAIN-SUFFIX,youtubeeducation.com
 DOMAIN-SUFFIX,youtubegaming.com
 DOMAIN-SUFFIX,youtubekids.com
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
 
-# Дополнительные сервисы Google для YouTube
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,googleoptimize.com
-DOMAIN-SUFFIX,googlesyndication.com
-
-# Критические API YouTube
-DOMAIN,youtubei.googleapis.com
-DOMAIN,yt3.ggpht.com
-DOMAIN-SUFFIX,yt3.ggpht.com
-DOMAIN-SUFFIX,youtube-ui.l.google.com
-DOMAIN-SUFFIX,ytimg.l.google.com
-
-# Дополнительные домены доставки контента
-DOMAIN-SUFFIX,youtubed.com
-DOMAIN-SUFFIX,ytimg.l.google.com
 
 
 
@@ -227,28 +206,6 @@ IP-CIDR,204.15.20.0/22,no-resolve
 
 
 
-# Google
-DOMAIN-SUFFIX,youtube.com
-
-DOMAIN-SUFFIX,youtu.be
-
-DOMAIN-SUFFIX,youtube-nocookie.com
-
-DOMAIN-SUFFIX,yt.be
-
-DOMAIN-SUFFIX,ytimg.com
-
-DOMAIN-SUFFIX,googlevideo.com
-
-DOMAIN-SUFFIX,ggpht.com
-
-DOMAIN-SUFFIX,gvt0.com
-
-DOMAIN-SUFFIX,gvt1.com
-
-DOMAIN-SUFFIX,gvt2.com
-
-DOMAIN-SUFFIX,gvt3.com
 
 
 
