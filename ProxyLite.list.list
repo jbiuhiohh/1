@@ -187,21 +187,21 @@ DOMAIN-SUFFIX,dockerhub.com
 
 # Discord (полностью заблокирован в РФ)
 # Основные домены платформы
-DOMAIN-SUFFIX,discord.co,PROXY
-DOMAIN-SUFFIX,discord.com,PROXY
-DOMAIN-SUFFIX,discord.gg,PROXY
-DOMAIN-SUFFIX,discord.media,PROXY
-DOMAIN-SUFFIX,discordapp.com,PROXY
-DOMAIN-SUFFIX,discordapp.net,PROXY
+DOMAIN-SUFFIX,discord.co
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
 
 # Ключевые CDN и медиа-хостинги (для голоса, видео, загрузки файлов)
-DOMAIN-SUFFIX,discordcdn.com,PROXY
-DOMAIN-SUFFIX,cdn.discordapp.com,PROXY
+DOMAIN-SUFFIX,discordcdn.com
+DOMAIN-SUFFIX,cdn.discordapp.comY
 
 # Дополнительные служебные домены
-DOMAIN-SUFFIX,discordstatus.com,PROXY
-DOMAIN-SUFFIX,discord.gift,PROXY
-DOMAIN-SUFFIX,gateway.discord.gg,PROXY
+DOMAIN-SUFFIX,discordstatus.com
+DOMAIN-SUFFIX,discord.gift
+DOMAIN-SUFFIX,gateway.discord.gg
 
 # Facebook
 DOMAIN-SUFFIX,x.com
