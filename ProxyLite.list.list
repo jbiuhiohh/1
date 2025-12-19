@@ -1,5 +1,12 @@
 # Мой лист
 
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,chatgpt.com
+
+
+
+
 DOMAIN-KEYWORD,youtube.com
 DOMAIN-SUFFIX,youtubei.googleapis.com
 DOMAIN-SUFFIX,ggpht.com
