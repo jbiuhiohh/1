@@ -12,6 +12,11 @@ DOMAIN-SUFFIX,youtubei.googleapis.com
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-KEYWORD,ytimg
 DOMAIN-KEYWORD,googlevideo.com
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,android.googleapis.com
 
 DOMAIN-SUFFIX,xhamster.com
 DOMAIN-SUFFIX,video-cf.xhcdn.com
