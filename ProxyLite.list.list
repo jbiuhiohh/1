@@ -11,6 +11,13 @@ DOMAIN-SUFFIX,chatgpt.com
 
 
 DOMAIN-KEYWORD,youtube.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtube.googleapis.com
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googleads.g.doubleclick.net
 DOMAIN-SUFFIX,youtubei.googleapis.com
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-KEYWORD,ytimg
