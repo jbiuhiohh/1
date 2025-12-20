@@ -28,18 +28,39 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,android.googleapis.com
 
-# Instagram
-DOMAIN-SUFFIX,cdninstagram.com
+# Instagram core
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,instagr.am
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-KEYWORD,instagram
-DOMAIN-SUFFIX,graph.instagram.com
-DOMAIN-SUFFIX,i.instagram.com
-DOMAIN-SUFFIX,instagramstatic-a.akamaihd.net
-DOMAIN-SUFFIX,instagramimages-a.akamaihd.net
-DOMAIN-SUFFIX,instagram.fbni1-1.fna.fbcdn.net
+DOMAIN-SUFFIX,secure.instagram.com
 DOMAIN-SUFFIX,help.instagram.com
+
+# API
+DOMAIN-SUFFIX,i.instagram.com
+DOMAIN-SUFFIX,graph.instagram.com
+DOMAIN-SUFFIX,b-graph.instagram.com
+DOMAIN-SUFFIX,z-m-graph.instagram.com
+
+# CDN / media (сторис, рилсы, видео)
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagramcdn.com
+DOMAIN-SUFFIX,instagramstatic.com
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,akamaihd.net
+DOMAIN-SUFFIX,akamaized.net
+
+# Facebook / Meta backend (КРИТИЧНО)
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,meta.com
+
+# Авторизация / сообщения / push
+DOMAIN-SUFFIX,accountscenter.instagram.com
+DOMAIN-SUFFIX,accounts.facebook.com
+DOMAIN-SUFFIX,edge-mqtt.facebook.com
+
 
 
 DOMAIN-SUFFIX,xhamster.com
