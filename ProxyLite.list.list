@@ -28,6 +28,20 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,android.googleapis.com
 
+# Instagram
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-KEYWORD,instagram
+DOMAIN-SUFFIX,graph.instagram.com
+DOMAIN-SUFFIX,i.instagram.com
+DOMAIN-SUFFIX,instagramstatic-a.akamaihd.net
+DOMAIN-SUFFIX,instagramimages-a.akamaihd.net
+DOMAIN-SUFFIX,instagram.fbni1-1.fna.fbcdn.net
+DOMAIN-SUFFIX,help.instagram.com
+
+
 DOMAIN-SUFFIX,xhamster.com
 DOMAIN-SUFFIX,video-cf.xhcdn.com
 DOMAIN-SUFFIX,xhcdn.com
