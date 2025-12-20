@@ -34,16 +34,16 @@ tun:
 proxies:
   - name: "vless-test"
     type: vless
-    server: ru.stroyinvest43.ru
+    server: 
     port: 443
-    uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
+    uuid: 
     network: tcp
     tls: true
     security: reality
-    servername: ru.stroyinvest43.ru
+    servername: 
     reality-opts:
-      public-key: uqwXosv8ASNRrve5QvA15FPygYX6hHhLzwThRxXfDjg
-      short-id: 961d8c765526e5
+      public-key: 
+      short-id: 
       spider-x: /
     client-fingerprint: firefox
     flow: xtls-rprx-vision
