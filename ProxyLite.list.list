@@ -1,12 +1,45 @@
 # Мой лист
-
+#пользовательские#
 DOMAIN-SUFFIX,2ip.io
 DOMAIN-SUFFIX,speedtest.net
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,lostfilm.today
+DOMAIN-SUFFIX,lostfilm.tv
+DOMAIN-SUFFIX,habr.com
+DOMAIN-SUFFIX,4pda.to
+DOMAIN-SUFFIX,wikimapia.org
 
+
+# Core
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telegra.ph
+
+# API / backend (КРИТИЧНО)
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,api.telegram.org
+
+# CDN / media (видео, голос, файлы)
+DOMAIN-SUFFIX,tgcdn.org
+DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,telegram-cdn.org
+
+# MTProto servers
+DOMAIN-SUFFIX,telesco.pe
+DOMAIN-SUFFIX,telegram.dog
+
+# Web / auth
+DOMAIN-SUFFIX,web.telegram.org
+DOMAIN-SUFFIX,my.telegram.org
+DOMAIN-SUFFIX,oauth.telegram.org
+
+
+#
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,chatgpt.com
-
+#
 
 
 
@@ -116,13 +149,54 @@ DOMAIN-SUFFIX,cdn.xuansiwei.com
 ###########
 
 
-
+#
+# XHAMSTER
 DOMAIN-SUFFIX,xhamster.com
-DOMAIN-SUFFIX,video-cf.xhcdn.com
+DOMAIN-SUFFIX,ru.xhamster.com
 DOMAIN-SUFFIX,xhcdn.com
+DOMAIN-SUFFIX,video-cf.xhcdn.com
 DOMAIN-SUFFIX,ic-vt-nss.xhcdn.com
-DOMAIN-KEYWORD,xhpingcdn.com
-DOMAIN-KEYWORD,xhcdn
+DOMAIN-SUFFIX,xhvideo.sacdnssedge.com
+DOMAIN-SUFFIX,xhpingcdn.com
 
-DOMAIN-KEYWORD,pornhub.com
-DOMAIN-KEYWORD,phncdn.com
+# PORNHUB
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+
+# XVIDEOS
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,xvideos2.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+
+# XNXX
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xnxx-ru.com
+DOMAIN-SUFFIX,xnxx-cdn.com
+
+# REDTUBE
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,rdtcdn.com
+
+# OTHER VIDEO / CAM
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,bongacams.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,livejasmin.com
+
+# CDN / MEDIA
+DOMAIN-SUFFIX,ahcdn.com
+DOMAIN-SUFFIX,bcvcdn.com
+DOMAIN-SUFFIX,dditscdn.com
+DOMAIN-SUFFIX,sb-cd.com
+DOMAIN-SUFFIX,ypncdn.com
+
+# OTHER
+DOMAIN-SUFFIX,8teenxxx.com
+DOMAIN-SUFFIX,sex-studentki.live
+DOMAIN-SUFFIX,t66y.com
+
+
+
+
