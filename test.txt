@@ -35,16 +35,16 @@ proxies:
     type: vless
     server: ru.stroyinvest43.ru
     port: 443
-    uuid: 5e3d66ef-20c7-46f6-80f1-46a2cd438e8c
+    uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
     network: tcp
     tls: true
     security: reality
     servername: ru.stroyinvest43.ru
     reality-opts:
-      public-key: 9ktdce-QgJHgOAccqV4IfxxOM5Bv5CaJDFcJHzvMI2w
-      short-id: 505bd1a78a37a4
+      public-key: uqwXosv8ASNRrve5QvA15FPygYX6hHhLzwThRxXfDjg
+      short-id: sBZGR-ZEuZ78IOlMLTgRm8nhmIevCuMYP3t7rBAJplQ
       spider-x: /
-    client-fingerprint: chrome
+    client-fingerprint: firefox
     flow: xtls-rprx-vision
     udp: true
 
