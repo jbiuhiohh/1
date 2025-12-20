@@ -61,6 +61,26 @@ DOMAIN-SUFFIX,accountscenter.instagram.com
 DOMAIN-SUFFIX,accounts.facebook.com
 DOMAIN-SUFFIX,edge-mqtt.facebook.com
 
+# Core
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chat.openai.com
+DOMAIN-SUFFIX,auth.openai.com
+DOMAIN-SUFFIX,platform.openai.com
+
+# API (КРИТИЧНО)
+DOMAIN-SUFFIX,api.openai.com
+
+# CDN / assets
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+
+# Auth / security
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,cdn.auth0.com
+
+# Cloudflare (иногда без этого не грузится)
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cf-ipfs.com
 
 
 DOMAIN-SUFFIX,xhamster.com
