@@ -34,7 +34,7 @@ tun:
 proxies:
   - name: "vless-test"
     type: vless
-    server: ru.stroyinvest43.ru
+    server: 83.147.255.140
     port: 443
     uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
     network: tcp
