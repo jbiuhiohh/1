@@ -36,7 +36,7 @@ proxies:
     type: vless
     server: ru.stroyinvest43.ru
     port: 443
-    uuid: 588d9085b8f7e839
+    uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
     network: tcp
     tls: true
     security: reality
