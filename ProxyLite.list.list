@@ -197,6 +197,34 @@ DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,sex-studentki.live
 DOMAIN-SUFFIX,t66y.com
 
+# Core
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,www.linkedin.com
+
+# Auth / login
+DOMAIN-SUFFIX,linkedin.net
+DOMAIN-SUFFIX,licdn.com
+
+# API / backend
+DOMAIN-SUFFIX,api.linkedin.com
+DOMAIN-SUFFIX,media.licdn.com
+
+# Static / frontend
+DOMAIN-SUFFIX,static.licdn.com
+DOMAIN-SUFFIX,dms.licdn.com
+
+# Images / video / CDN
+DOMAIN-SUFFIX,media-exp1.licdn.com
+DOMAIN-SUFFIX,media-exp2.licdn.com
+DOMAIN-SUFFIX,media-exp3.licdn.com
+DOMAIN-SUFFIX,media-exp4.licdn.com
+DOMAIN-SUFFIX,media-exp5.licdn.com
+DOMAIN-SUFFIX,media-exp6.licdn.com
+DOMAIN-SUFFIX,media-exp7.licdn.com
+
+# Ads / tracking (часть функционала без них может ломаться)
+DOMAIN-SUFFIX,ads.linkedin.com
+DOMAIN-SUFFIX,px.ads.linkedin.com
 
 
 
