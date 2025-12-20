@@ -34,7 +34,7 @@ tun:
 proxies:
   - name: "vless-test"
     type: vless
-    server: 83.147.255.140
+    server: ru.stroyinvest43.ru
     port: 443
     uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
     network: tcp
@@ -43,7 +43,7 @@ proxies:
     servername: ru.stroyinvest43.ru
     reality-opts:
       public-key: uqwXosv8ASNRrve5QvA15FPygYX6hHhLzwThRxXfDjg
-      short-id: a5e09836d9de30ec
+      short-id: 961d8c765526e5
       spider-x: /
     client-fingerprint: firefox
     flow: xtls-rprx-vision
