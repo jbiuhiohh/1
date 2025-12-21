@@ -1,44 +1,37 @@
 # 🌐 Основные настройки
 mixed-port: 7890
-ipv6: false
-allow-lan: false
+allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 🔍 DNS (оптимизировано для РФ)
+# 📡 DNS (упрощённый, стабильный)
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: fake-ip
-  prefer-h3: true
+  enhanced-mode: redir-host
   nameserver:
-    - tls://77.88.8.8
-    - https://dns.yandex.ru/dns-query
-  fallback:
-    - https://1.1.1.1/dns-query
-    - https://dns.google/dns-query
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4  # Блокирует все IPv6-резолвы (AAAA)
-  fake-ip-filter:
-    - "*.local"
-    - "*.sber*"
-    - "*.tinkoff*"
+    - 1.1.1.1
+    - 8.8.8.8
 
-# 🚇 TUN (для обхода DPI)
-tun:
-  enable: true
-  auto-route: true
-  auto-detect-interface: true
-  stack: system
-  dns-hijack:
-    - 77.88.8.8:53
-  system-filter:
-    - "0.0.0.0/0"       # Только IPv4
-    - "::/0 reject"     # Явно запрещаем IPv6
-
+# 🛰 Прокси
+proxies:
+  - name: "vless-test"
+    type: vless
+    server: ru.stroyinvest43.ru
+    port: 443
+    uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
+    network: tcp
+    tls: true
+    security: reality
+    servername: ru.stroyinvest43.ru
+    reality-opts:
+      public-key: uqwXosv8ASNRrve5QvA15FPygYX6hHhLzwThRxXfDjg
+      short-id: 961d8c765526e5
+      spider-x: /
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    udp: true
 
 # 📦 Rule Providers
 rule-providers:
@@ -49,7 +42,6 @@ rule-providers:
     format: "text"
     path: "./ruleset/BlockedSites.yaml"
     interval: 3600
-
   BanAD:
     type: "http"
     behavior: "classical"
@@ -57,7 +49,6 @@ rule-providers:
     format: "text"
     path: "./ruleset/BanAD.yaml"
     interval: 86400
-
   BanProgramAD:
     type: "http"
     behavior: "classical"
@@ -66,32 +57,13 @@ rule-providers:
     path: "./ruleset/BanProgramAD.yaml"
     interval: 3600
 
-
-# 🛰️ Прокси-сервер
-proxies:
-  - name: "vless-vision"
-    type: vless
-    server: "138.124.117.94"
-    port: 443
-    uuid: "0cf76b87-4ef7-4d14-922d-aec8b3cd21fe"
-    network: "tcp"
-    tls: true
-    servername: "google.com"
-    reality-opts:
-      public-key: "K-Jxq2nBeHCrgiQDO3R4zqJzbuy7oWqDJ9D32P-LL2c"
-      short-id: "a5500427"
-    client-fingerprint: "chrome"
-    flow: "xtls-rprx-vision"
-    udp: true
-
-
-# 🎚️ Группы прокси
+# 🎚 Группы прокси
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "vless-vision"
-
+      - "vless-test"
+      - "DIRECT"
   - name: "BLOCK_ADS"
     type: select
     proxies:
@@ -101,20 +73,12 @@ proxy-groups:
 # 📜 Правила
 rules:
   # 1️⃣ Блокировка рекламы
-  - RULE-SET,BanAD,BLOCK_ADS  # Используем простое имя
-  - RULE-SET,BanProgramAD,BLOCK_ADS 
-
+  - RULE-SET,BanAD,BLOCK_ADS
+  - RULE-SET,BanProgramAD,BLOCK_ADS
   # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
-
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
-
-
-
-
-
-
 
 
 
