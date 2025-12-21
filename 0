@@ -14,39 +14,62 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
 
-# 🛰 Твой прокси Питер
+# 🛰 Прокси
 proxies:
-  - name: "Piter-VLESS"
+  - name: "vless-test"
     type: vless
     server: ru.stroyinvest43.ru
-    port: 443
-    uuid: 5e3d66ef-20c7-46f6-80f1-46a2cd438e8c
-    network: tcp
+    port: 2053
+    uuid: 03742072-9296-46b3-aed1-540432bdcc74
+    cipher: none
     tls: true
-    security: reality
-    servername: ru.stroyinvest43.ru
-    reality-opts:
-      public-key: 9ktdce-QgJHgOAccqV4IfxxOM5Bv5CaJDFcJHzvMI2w
-      short-id: 505bd1a78a37a4
-      spider-x: /
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    udp: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: ru.stroyinvest43.ru
 
-# 🌍 Группы выбора
+# 📦 Rule Providers
+rule-providers:
+  BlockedSites:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/ProxyLite.list.list"
+    format: "text"
+    path: "./ruleset/BlockedSites.yaml"
+    interval: 3600
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    format: "text"
+    path: "./ruleset/BanAD.yaml"
+    interval: 86400
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    format: "text"
+    path: "./ruleset/BanProgramAD.yaml"
+    interval: 3600
+
+# 🎚 Группы прокси
 proxy-groups:
-  - name: "🛰 PROXY"
+  - name: "PROXY"
     type: select
     proxies:
-      - Piter-VLESS
-      - DIRECT
-
-  - name: "🌍 GLOBAL"
+      - "vless-test"
+      - "DIRECT"
+  - name: "BLOCK_ADS"
     type: select
     proxies:
-      - 🛰 PROXY
-      - DIRECT
+      - "REJECT"
+      - "DIRECT"
 
-# 📌 Правила (минимум)
+# 📜 Правила
 rules:
-  - MATCH,🌍 GLOBAL
+  # 1️⃣ Блокировка рекламы
+  - RULE-SET,BanAD,BLOCK_ADS
+  - RULE-SET,BanProgramAD,BLOCK_ADS
+  # 2️⃣ Заблокированные РКН сайты
+  - RULE-SET,BlockedSites,PROXY
+  # 4️⃣ Остальное - напрямую
+  - MATCH,DIRECT
