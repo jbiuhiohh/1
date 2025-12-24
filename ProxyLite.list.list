@@ -21,28 +21,28 @@ DOMAIN-SUFFIX,wikimapia.org
 
 
 # Core
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,telegra.ph
+#DOMAIN-SUFFIX,telegram.org
+#DOMAIN-SUFFIX,t.me
+#DOMAIN-SUFFIX,tdesktop.com
+#DOMAIN-SUFFIX,telegra.ph
 
 # API / backend (КРИТИЧНО)
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,api.telegram.org
+#DOMAIN-SUFFIX,telegram.me
+#DOMAIN-SUFFIX,api.telegram.org
 
 # CDN / media (видео, голос, файлы)
-DOMAIN-SUFFIX,tgcdn.org
-DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,telegram-cdn.org
+#DOMAIN-SUFFIX,tgcdn.org
+#DOMAIN-SUFFIX,cdn-telegram.org
+#DOMAIN-SUFFIX,telegram-cdn.org
 
 # MTProto servers
-DOMAIN-SUFFIX,telesco.pe
-DOMAIN-SUFFIX,telegram.dog
+#DOMAIN-SUFFIX,telesco.pe
+#DOMAIN-SUFFIX,telegram.dog
 
 # Web / auth
-DOMAIN-SUFFIX,web.telegram.org
-DOMAIN-SUFFIX,my.telegram.org
-DOMAIN-SUFFIX,oauth.telegram.org
+#DOMAIN-SUFFIX,web.telegram.org
+#DOMAIN-SUFFIX,my.telegram.org
+#DOMAIN-SUFFIX,oauth.telegram.org
 
 
 #
