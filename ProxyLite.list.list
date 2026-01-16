@@ -5,6 +5,10 @@
 DOMAIN-SUFFIX,browserstack.com
 DOMAIN-SUFFIX,app.requestly.io
 
+#locus
+
+DOMAIN-SUFFIX,openandromaps.org
+
 
 
 DOMAIN-SUFFIX,cdn.aqara.com
