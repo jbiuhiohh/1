@@ -71,6 +71,7 @@ proxy-groups:
       - "REJECT"
       - "DIRECT"
 
+
 # 📜 Правила
 rules:
   # 1️⃣ Блокировка рекламы
@@ -80,6 +81,7 @@ rules:
   - RULE-SET,BlockedSites,PROXY
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
