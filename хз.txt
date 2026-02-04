@@ -16,18 +16,18 @@ dns:
 
 # 🛰 Прокси
 proxies:
-  - name: "Test"
+  - name: "vless-test"
     type: vless
     server: ru2.stroyinvest43.ru
     port: 443
-    uuid: 0b4a1dca-1245-4f11-9457-6e066765d8bf
+    uuid: 4a4bfff8-e119-4105-81d5-78a3fcd891d8
     network: tcp
     tls: true
     security: reality
-    servername: ru2.stroyinvest43.ru
+    servername: ru.stroyinvest43.ru
     reality-opts:
-      public-key: AkGA6qn47gSBpWTd-Y8rjQ8w68iBvLvW1Bal1O-Gjn4
-      short-id: be9956b610218814
+      public-key: uqwXosv8ASNRrve5QvA15FPygYX6hHhLzwThRxXfDjg
+      short-id: 961d8c765526e5
       spider-x: /
     client-fingerprint: firefox
     flow: xtls-rprx-vision
@@ -62,7 +62,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "Test"
+      - "vless-test"
       - "DIRECT"
   - name: "BLOCK_ADS"
     type: select
@@ -79,6 +79,7 @@ rules:
   - RULE-SET,BlockedSites,PROXY
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
+
 
 
 
