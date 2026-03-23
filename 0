@@ -17,6 +17,28 @@ dns:
   fallback:
     - tls://1.1.1.1:853
     - tls://8.8.8.8:853
+  fake-ip-filter:
+    # локалка
+    - "*.lan"
+    - "*.local"
+    
+    # Яндекс (у тебя уже ошибка была)
+    - "*.yandex.*"
+    
+    # банки и оплата
+    - "*.bank*"
+    - "*.payment*"
+    
+    # Apple
+    - "*.apple.com"
+    - "*.icloud.com"
+    
+    # Microsoft
+    - "*.microsoft.com"
+    - "*.live.com"
+    
+    # Google (иногда нужно)
+    - "*.google.com"
 
 # 🛰 Прокси
 proxies:
