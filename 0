@@ -1,11 +1,11 @@
-# 🌐 Основные настройки
+## 🌐 Основные настройки
 mixed-port: 7890
 allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 
-# 📡 DNS (упрощённый, стабильный)
+##📡 DNS
 dns:
   enable: true
   ipv6: false
@@ -16,16 +16,39 @@ dns:
 
 # 🛰 Прокси
 proxies:
-  - name: "vless-test"
+  - name: "Test"
     type: vless
-    server: ru.stroyinvest43.ru
-    port: 2053
-    uuid: 03742072-9296-46b3-aed1-540432bdcc74
-    cipher: none
+    server: ru2.stroyinvest43.ru
+    port: 443
+    uuid: 0b4a1dca-1245-4f11-9457-6e066765d8bf
+    network: tcp
     tls: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: ru.stroyinvest43.ru
+    security: reality
+    servername: ru2.stroyinvest43.ru
+    reality-opts:
+      public-key: AkGA6qn47gSBpWTd-Y8rjQ8w68iBvLvW1Bal1O-Gjn4
+      short-id: be9956b610218814
+      spider-x: /
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    udp: true
+
+  - name: "Test2"
+    type: vless
+    server: ru3.stroyinvest43.ru
+    port: 443
+    uuid: 11111111-2222-3333-4444-555555555555
+    network: tcp
+    tls: true
+    security: reality
+    servername: ru3.stroyinvest43.ru
+    reality-opts:
+      public-key: BkGA6qn47gSBpWTd-Y8rjQ8w68iBvLvW1Bal1O-Gjn5
+      short-id: ce9956b610218815
+      spider-x: /
+    client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    udp: true
 
 # 📦 Rule Providers
 rule-providers:
@@ -50,18 +73,34 @@ rule-providers:
     format: "text"
     path: "./ruleset/BanProgramAD.yaml"
     interval: 3600
+  Telegram:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/jbiuhiohh/1/refs/heads/main/Telegram.list"
+    format: "text"
+    path: "./ruleset/Telegram.yaml"
+    interval: 3600
 
 # 🎚 Группы прокси
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "vless-test"
+      - "Test"
+      - "Test2"
       - "DIRECT"
+      
   - name: "BLOCK_ADS"
     type: select
     proxies:
       - "REJECT"
+      - "DIRECT"
+
+  - name: "TELEGRAM"
+    type: select
+    proxies:
+      - "Test"
+      - "Test2"
       - "DIRECT"
 
 # 📜 Правила
@@ -71,5 +110,7 @@ rules:
   - RULE-SET,BanProgramAD,BLOCK_ADS
   # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
+  # 3️⃣ Telegram через отдельную группу прокси
+  - RULE-SET,Telegram,TELEGRAM
   # 4️⃣ Остальное - напрямую
   - MATCH,DIRECT
