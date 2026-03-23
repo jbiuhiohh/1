@@ -1,44 +1,52 @@
-## 🌐 Основные настройки
+# 🌐 Основные настройки
 mixed-port: 7890
 allow-lan: true
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
+ipv6: false
+# Поменял на 0.0.0.0, чтобы ты мог зайти в панель (Yacd/Metacubexd) с любого устройства в сети роутера
+external-controller: 0.0.0.0:9090 
+secret: "" # Пароль для внешней панели (можно оставить пустым для локалки)
 
-##📡 DNS
+# 🛠 Настройки TUN (Прозрачное проксирование для всех устройств)
+tun:
+  enable: true
+  stack: system # system стабильнее для роутеров, чем gvisor
+  auto-route: true
+  auto-detect-interface: true
+  dns-hierarchical-resolution: true
+
+# 📡 DNS
 dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
   listen: 0.0.0.0:53
+  
   nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - https://dns.yandex.ru/dns-query # Быстрый резолв рунета
+    
+  fallback:
     - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
-  fallback:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
+    - tls://dns.quad9.net:853
+
   fake-ip-filter:
-    # локалка
     - "*.lan"
     - "*.local"
-    
-    # Яндекс (у тебя уже ошибка была)
     - "*.yandex.*"
-    
-    # банки и оплата
+    - "*.mail.ru"
+    - "*.vk.com"
     - "*.bank*"
     - "*.payment*"
-    
-    # Apple
     - "*.apple.com"
     - "*.icloud.com"
-    
-    # Microsoft
     - "*.microsoft.com"
     - "*.live.com"
-    
-    # Google (иногда нужно)
-    - "*.google.com"
+    - "*.google.com" # Удобно оставить, чтобы не ломался поиск
+
 
 # 🛰 Прокси
 proxies:
@@ -134,6 +142,8 @@ rules:
   # 1️⃣ Блокировка рекламы
   - RULE-SET,BanAD,BLOCK_ADS
   - RULE-SET,BanProgramAD,BLOCK_ADS
+  # 2. Локальный трафик пускаем в обход прокси сразу (чтобы не гонять лишний раз)
+  - GEOIP,lan,DIRECT,no-resolve
   # 2️⃣ Заблокированные РКН сайты
   - RULE-SET,BlockedSites,PROXY
   # 3️⃣ Telegram через отдельную группу прокси
