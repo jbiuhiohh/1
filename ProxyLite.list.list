@@ -1,5 +1,6 @@
 ## Мой 
 
+DOMAIN-SUFFIX,kpu.samsungelectronics.com
 DOMAIN-SUFFIX,client.wns.windows.com
 DOMAIN-SUFFIX,duckdns.org
 IP-CIDR,8.8.8.8/32
