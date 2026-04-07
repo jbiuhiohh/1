@@ -22,6 +22,7 @@ DOMAIN-SUFFIX,duckdns.org
 
 
 # РАбота
+DOMAIN-SUFFIX,rutracker.org
 DOMAIN-SUFFIX,ccleaner.com
 DOMAIN-SUFFIX,new-sentry.gitlab.net
 DOMAIN-SUFFIX,snowplowprd.trx.gitlab.net
