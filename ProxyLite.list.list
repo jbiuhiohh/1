@@ -1,5 +1,57 @@
 ## Мой 
 
+# Основные домены
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,googleusercontent.com
+
+# Play Market / Android
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,android.googleapis.com
+
+# API и сервисы
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,gvt3.com
+
+# Клиентские сервисы (часто в логах)
+DOMAIN-SUFFIX,clients.google.com
+DOMAIN-SUFFIX,clients1.google.com
+DOMAIN-SUFFIX,clients2.google.com
+DOMAIN-SUFFIX,clients3.google.com
+DOMAIN-SUFFIX,clients4.google.com
+DOMAIN-SUFFIX,clients5.google.com
+DOMAIN-SUFFIX,clients6.google.com
+
+# Firebase / push / уведомления
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,googlefirebase.com
+
+# Аналитика / трекинг
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,analytics.google.com
+DOMAIN-SUFFIX,googletagmanager.com
+
+# Видео / медиа
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,googlevideo.com
+
+# Безопасность / капча
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,g.co
+
+# Дополнительно (часто встречаются)
+DOMAIN-SUFFIX,withgoogle.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,app-measurement.com
+
 DOMAIN-SUFFIX,clients4.google.com
 DOMAIN-SUFFIX,waa-pa.clients6.google.com
 DOMAIN-SUFFIX,www.googletagmanager.com
