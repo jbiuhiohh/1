@@ -20,7 +20,9 @@ DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,authenticator.cursor.sh
 DOMAIN-SUFFIX,api2.cursor.sh
 
-
+DOMAIN-SUFFIX,console.anthropic.co
+DOMAIN-SUFFIX,api.anthropic.com
+DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,s-cdn.anthropic.com
 DOMAIN-SUFFIX,assets-proxy.anthropic.com
 
