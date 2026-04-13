@@ -1,5 +1,6 @@
 
 # Core
+DOMAIN-SUFFIX,my.telegram.org
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
