@@ -20,6 +20,8 @@ DOMAIN-SUFFIX,deepmind.google
 
 
 # Курсор
+DOMAIN-SUFFIX,api3.cursor.sh
+DOMAIN-SUFFIX,metrics.cursor.sh
 DOMAIN-SUFFIX,repo42.cursor.sh
 DOMAIN-SUFFIX,authenticator.cursor.sh
 DOMAIN-SUFFIX,api2.cursor.sh
