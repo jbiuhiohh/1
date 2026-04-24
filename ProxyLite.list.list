@@ -8,6 +8,15 @@ DOMAIN-SUFFIX, porntrex.com
 DOMAIN-SUFFIX,ptx.cdntrex.com
 DOMAIN-SUFFIX,cdn.pcdn.cloudswitches.com
 
+# deepseek
+DOMAIN-SUFFIX,deepseek.com
+DOMAIN-KEYWORD,deepseek
+  
+# Дополнительные домены (статика, API и авторизация)
+DOMAIN,chat.deepseek.com
+DOMAIN,api.deepseek.com
+DOMAIN,www.deepseek.com
+
 # GEMINI
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
