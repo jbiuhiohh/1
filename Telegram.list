@@ -52,6 +52,7 @@ DOMAIN-SUFFIX,imofree.com
 DOMAIN-SUFFIX,gateway.imo.im
 DOMAIN-SUFFIX,api.imo.im
 DOMAIN-SUFFIX,chat.imo.im
+DOMAIN-SUFFIX,news-cdn.site
 IP-CIDR,5.150.156.0/22
 IP-CIDR,38.90.96.0/24
 IP-CIDR,69.57.173.0/24
