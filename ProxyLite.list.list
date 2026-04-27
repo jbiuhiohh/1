@@ -29,6 +29,8 @@ DOMAIN-SUFFIX,deepmind.google
 
 
 # Курсор
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,api4.cursor.sh
 DOMAIN-SUFFIX,agentn.global.api5.cursor.sh
 DOMAIN-SUFFIX,api3.cursor.sh
 DOMAIN-SUFFIX,metrics.cursor.sh
