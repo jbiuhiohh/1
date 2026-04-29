@@ -1,19 +1,6 @@
 ## Мой 
 
-####Hik-Conect
 
-
-# DOMAIN-SUFFIX,api.hik-online.com
-# DOMAIN-SUFFIX,isgp-team.hikcentralconnect.com
-# DOMAIN-SUFFIX,vtmrus.ezvizru.com
-# DOMAIN-SUFFIX, mdev.ezvizru.com
-# DOMAIN-SUFFIX,litedev.hik-connect.com
-# DOMAIN-SUFFIX,dev.hik-connect.com
-# DOMAIN-SUFFIX,hik-cloud.com
-# DOMAIN-SUFFIX,hikvision.com
-# DOMAIN-SUFFIX,hik-connect.com
-# DOMAIN-SUFFIX,apiirus.hik-connectru.com
-# DOMAIN-SUFFIX,ruslog.hik-connectru.com
 
 
 ####   AQARA   #####
@@ -167,7 +154,8 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,android.googleapis.com
 
-# Instagram core
+##### Instagram core ##########
+
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,instagr.am
 DOMAIN-SUFFIX,secure.instagram.com
@@ -221,40 +209,7 @@ DOMAIN-SUFFIX,cdn.auth0.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,cf-ipfs.com
 
-# ###dpi-checkers/ru/tcp-16-20/####
-# 
-# 
-# DOMAIN-SUFFIX,stat.ripe.net
-# DOMAIN-SUFFIX,roxio.com
-# DOMAIN-SUFFIX,img.wzstats.gg
-# DOMAIN-SUFFIX,bigcartel.com
-# DOMAIN-SUFFIX,genshin.jmp.blue
-# DOMAIN-SUFFIX,api.frankfurter.dev
-# DOMAIN-SUFFIX,genderize.io
-# DOMAIN-SUFFIX,j.dejure.org
-# DOMAIN-SUFFIX,net.fail
-# DOMAIN-SUFFIX,251b5cd9.nip.io
-# DOMAIN-SUFFIX,5fd8c176.nip.io
-# DOMAIN-SUFFIX,5fd8bdae.nip.io
-# DOMAIN-SUFFIX,5fd8bca5.nip.io
-# DOMAIN-SUFFIX,eu.api.ovh.com
-# DOMAIN-SUFFIX,ovh.sfx.ovh
-# DOMAIN-SUFFIX,oracle.sfx.ovh
-# DOMAIN-SUFFIX,tms.delta.com
-# DOMAIN-SUFFIX,corp.kaltura.com
-# DOMAIN-SUFFIX,api.usercentrics.eu
-# DOMAIN-SUFFIX,openoffice.apache.org
-# DOMAIN-SUFFIX,www.juniper.net
-# DOMAIN-SUFFIX,www.lg.com
-# DOMAIN-SUFFIX,media-assets.stryker.com
-# DOMAIN-SUFFIX,cdn.eso.org
-# DOMAIN-SUFFIX,cloudlets.io
-# DOMAIN-SUFFIX,renklisigorta.com.tr
-# DOMAIN-SUFFIX,cdn.xuansiwei.com
-# 
-# ###########
 
-#
 # XHAMSTER
 DOMAIN-SUFFIX,ageverif.com
 DOMAIN-SUFFIX,xhamster.com
@@ -307,22 +262,19 @@ DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,sex-studentki.live
 DOMAIN-SUFFIX,t66y.com
 
-# Core
+#### linkedin.com #####
+
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,www.linkedin.com
-
 # Auth / login
 DOMAIN-SUFFIX,linkedin.net
 DOMAIN-SUFFIX,licdn.com
-
 # API / backend
 DOMAIN-SUFFIX,api.linkedin.com
 DOMAIN-SUFFIX,media.licdn.com
-
 # Static / frontend
 DOMAIN-SUFFIX,static.licdn.com
 DOMAIN-SUFFIX,dms.licdn.com
-
 # Images / video / CDN
 DOMAIN-SUFFIX,media-exp1.licdn.com
 DOMAIN-SUFFIX,media-exp2.licdn.com
@@ -331,7 +283,6 @@ DOMAIN-SUFFIX,media-exp4.licdn.com
 DOMAIN-SUFFIX,media-exp5.licdn.com
 DOMAIN-SUFFIX,media-exp6.licdn.com
 DOMAIN-SUFFIX,media-exp7.licdn.com
-
 # Ads / tracking (часть функционала без них может ломаться)
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,px.ads.linkedin.com
