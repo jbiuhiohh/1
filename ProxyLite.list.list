@@ -3,19 +3,17 @@
 ####Hik-Conect
 
 
-DOMAIN-SUFFIX,balls.uniteae.com
-
-DOMAIN-SUFFIX,api.hik-online.com
-DOMAIN-SUFFIX,isgp-team.hikcentralconnect.com
-DOMAIN-SUFFIX,vtmrus.ezvizru.com
-DOMAIN-SUFFIX, mdev.ezvizru.com
-DOMAIN-SUFFIX,litedev.hik-connect.com
-DOMAIN-SUFFIX,dev.hik-connect.com
-DOMAIN-SUFFIX,hik-cloud.com
-DOMAIN-SUFFIX,hikvision.com
-DOMAIN-SUFFIX,hik-connect.com
-DOMAIN-SUFFIX,apiirus.hik-connectru.com
-DOMAIN-SUFFIX,ruslog.hik-connectru.com
+#DOMAIN-SUFFIX,api.hik-online.com
+#DOMAIN-SUFFIX,isgp-team.hikcentralconnect.com
+#DOMAIN-SUFFIX,vtmrus.ezvizru.com
+#DOMAIN-SUFFIX, mdev.ezvizru.com
+#DOMAIN-SUFFIX,litedev.hik-connect.com
+#DOMAIN-SUFFIX,dev.hik-connect.com
+#DOMAIN-SUFFIX,hik-cloud.com
+#DOMAIN-SUFFIX,hikvision.com
+#DOMAIN-SUFFIX,hik-connect.com
+#DOMAIN-SUFFIX,apiirus.hik-connectru.com
+#DOMAIN-SUFFIX,ruslog.hik-connectru.com
 
 
 ####   AQARA   #####
