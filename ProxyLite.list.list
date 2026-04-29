@@ -17,11 +17,12 @@
 
 
 ####   AQARA   #####
-DOMAIN-SUFFIX,rpc-ru.aqara.com
-DOMAIN-SUFFIX,CoAP-ru.AqAra.cOM
+#DOMAIN-SUFFIX,rpc-ru.aqara.com
+#DOMAIN-SUFFIX,CoAP-ru.AqAra.cOM
+#DOMAIN-SUFFIX,cdn.aqara.com
 
 
-DOMAIN-SUFFIX,  samsungtizenos.com
+
 ###DOMAIN-SUFFIX,tiles.nakarte.me
 
 DOMAIN-SUFFIX, eporner.com
@@ -74,11 +75,7 @@ DOMAIN-SUFFIX,picsum.photos
 DOMAIN-SUFFIX,jam-software.com
 DOMAIN-SUFFIX,customers.jam-software.de
 
-DOMAIN-SUFFIX,freeonlinephone.org
-DOMAIN-SUFFIX,Receive-sms.cc
-DOMAIN-SUFFIX,7sim.net
-DOMAIN-SUFFIX,esimplus.me
-DOMAIN-SUFFIX,Onlinesim.io
+
 DOMAIN-SUFFIX,Claude.ai
 DOMAIN-SUFFIX,Claude.com
 DOMAIN-SUFFIX,winscp.net
@@ -112,7 +109,7 @@ DOMAIN-SUFFIX,openandromaps.org
 
 
 
-DOMAIN-SUFFIX,cdn.aqara.com
+
 
 
 DOMAIN-SUFFIX,rutracker.org
@@ -224,39 +221,38 @@ DOMAIN-SUFFIX,cdn.auth0.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,cf-ipfs.com
 
-###dpi-checkers/ru/tcp-16-20/####
-
-
-DOMAIN-SUFFIX,stat.ripe.net
-DOMAIN-SUFFIX,roxio.com
-DOMAIN-SUFFIX,img.wzstats.gg
-DOMAIN-SUFFIX,bigcartel.com
-DOMAIN-SUFFIX,genshin.jmp.blue
-DOMAIN-SUFFIX,api.frankfurter.dev
-DOMAIN-SUFFIX,genderize.io
-DOMAIN-SUFFIX,j.dejure.org
-DOMAIN-SUFFIX,net.fail
-DOMAIN-SUFFIX,251b5cd9.nip.io
-DOMAIN-SUFFIX,5fd8c176.nip.io
-DOMAIN-SUFFIX,5fd8bdae.nip.io
-DOMAIN-SUFFIX,5fd8bca5.nip.io
-DOMAIN-SUFFIX,eu.api.ovh.com
-DOMAIN-SUFFIX,ovh.sfx.ovh
-DOMAIN-SUFFIX,oracle.sfx.ovh
-DOMAIN-SUFFIX,tms.delta.com
-DOMAIN-SUFFIX,corp.kaltura.com
-DOMAIN-SUFFIX,api.usercentrics.eu
-DOMAIN-SUFFIX,openoffice.apache.org
-DOMAIN-SUFFIX,www.juniper.net
-DOMAIN-SUFFIX,www.lg.com
-DOMAIN-SUFFIX,media-assets.stryker.com
-DOMAIN-SUFFIX,cdn.eso.org
-DOMAIN-SUFFIX,cloudlets.io
-DOMAIN-SUFFIX,renklisigorta.com.tr
-DOMAIN-SUFFIX,cdn.xuansiwei.com
-
-###########
-
+# ###dpi-checkers/ru/tcp-16-20/####
+# 
+# 
+# DOMAIN-SUFFIX,stat.ripe.net
+# DOMAIN-SUFFIX,roxio.com
+# DOMAIN-SUFFIX,img.wzstats.gg
+# DOMAIN-SUFFIX,bigcartel.com
+# DOMAIN-SUFFIX,genshin.jmp.blue
+# DOMAIN-SUFFIX,api.frankfurter.dev
+# DOMAIN-SUFFIX,genderize.io
+# DOMAIN-SUFFIX,j.dejure.org
+# DOMAIN-SUFFIX,net.fail
+# DOMAIN-SUFFIX,251b5cd9.nip.io
+# DOMAIN-SUFFIX,5fd8c176.nip.io
+# DOMAIN-SUFFIX,5fd8bdae.nip.io
+# DOMAIN-SUFFIX,5fd8bca5.nip.io
+# DOMAIN-SUFFIX,eu.api.ovh.com
+# DOMAIN-SUFFIX,ovh.sfx.ovh
+# DOMAIN-SUFFIX,oracle.sfx.ovh
+# DOMAIN-SUFFIX,tms.delta.com
+# DOMAIN-SUFFIX,corp.kaltura.com
+# DOMAIN-SUFFIX,api.usercentrics.eu
+# DOMAIN-SUFFIX,openoffice.apache.org
+# DOMAIN-SUFFIX,www.juniper.net
+# DOMAIN-SUFFIX,www.lg.com
+# DOMAIN-SUFFIX,media-assets.stryker.com
+# DOMAIN-SUFFIX,cdn.eso.org
+# DOMAIN-SUFFIX,cloudlets.io
+# DOMAIN-SUFFIX,renklisigorta.com.tr
+# DOMAIN-SUFFIX,cdn.xuansiwei.com
+# 
+# ###########
 
 #
 # XHAMSTER
