@@ -3,27 +3,27 @@
 ####Hik-Conect
 
 
-#DOMAIN-SUFFIX,api.hik-online.com
-#DOMAIN-SUFFIX,isgp-team.hikcentralconnect.com
-#DOMAIN-SUFFIX,vtmrus.ezvizru.com
-#DOMAIN-SUFFIX, mdev.ezvizru.com
-#DOMAIN-SUFFIX,litedev.hik-connect.com
-#DOMAIN-SUFFIX,dev.hik-connect.com
-#DOMAIN-SUFFIX,hik-cloud.com
-#DOMAIN-SUFFIX,hikvision.com
-#DOMAIN-SUFFIX,hik-connect.com
-#DOMAIN-SUFFIX,apiirus.hik-connectru.com
-#DOMAIN-SUFFIX,ruslog.hik-connectru.com
+# DOMAIN-SUFFIX,api.hik-online.com
+# DOMAIN-SUFFIX,isgp-team.hikcentralconnect.com
+# DOMAIN-SUFFIX,vtmrus.ezvizru.com
+# DOMAIN-SUFFIX, mdev.ezvizru.com
+# DOMAIN-SUFFIX,litedev.hik-connect.com
+# DOMAIN-SUFFIX,dev.hik-connect.com
+# DOMAIN-SUFFIX,hik-cloud.com
+# DOMAIN-SUFFIX,hikvision.com
+# DOMAIN-SUFFIX,hik-connect.com
+# DOMAIN-SUFFIX,apiirus.hik-connectru.com
+# DOMAIN-SUFFIX,ruslog.hik-connectru.com
 
 
 ####   AQARA   #####
-#DOMAIN-SUFFIX,rpc-ru.aqara.com
-#DOMAIN-SUFFIX,CoAP-ru.AqAra.cOM
-#DOMAIN-SUFFIX,cdn.aqara.com
+# DOMAIN-SUFFIX,rpc-ru.aqara.com
+# DOMAIN-SUFFIX,CoAP-ru.AqAra.cOM
+# DOMAIN-SUFFIX,cdn.aqara.com
 
 
 
-###DOMAIN-SUFFIX,tiles.nakarte.me
+### DOMAIN-SUFFIX,tiles.nakarte.me
 
 DOMAIN-SUFFIX, eporner.com
 DOMAIN-SUFFIX, porntrex.com
@@ -35,9 +35,9 @@ DOMAIN-SUFFIX,deepseek.com
 DOMAIN-KEYWORD,deepseek
   
 # Дополнительные домены (статика, API и авторизация)
-DOMAIN,chat.deepseek.com
-DOMAIN,api.deepseek.com
-DOMAIN,www.deepseek.com
+DOMAIN-SUFFIX,chat.deepseek.com
+DOMAIN-SUFFIX,api.deepseek.com
+DOMAIN-SUFFIX,www.deepseek.com
 
 # GEMINI
 DOMAIN-SUFFIX,gemini.google.com
