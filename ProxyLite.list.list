@@ -8,8 +8,12 @@
 # DOMAIN-SUFFIX,CoAP-ru.AqAra.cOM
 # DOMAIN-SUFFIX,cdn.aqara.com
 
-
+### Locus Map ###
+  # Outdoor #
 DOMAIN-SUFFIX, tile.thunderforest.com
+
+DOMAIN-SUFFIX,mapserver.mapy.cz
+
 ### DOMAIN-SUFFIX,tiles.nakarte.me
 
 DOMAIN-SUFFIX, eporner.com
