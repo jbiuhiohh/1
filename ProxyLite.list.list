@@ -8,7 +8,8 @@
 # DOMAIN-SUFFIX,cdn.aqara.com
 
 ### Locus Map ###
-  # Outdoor #
+  
+# Outdoor #
 DOMAIN-SUFFIX, tile.thunderforest.com
 
 DOMAIN-SUFFIX, mapserver.mapy.cz
