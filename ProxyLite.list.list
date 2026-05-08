@@ -11,7 +11,7 @@
   # Outdoor #
 DOMAIN-SUFFIX, tile.thunderforest.com
 
-DOMAIN-SUFFIX,mapserver.mapy.cz
+DOMAIN-SUFFIX, mapserver.mapy.cz
 
 ### DOMAIN-SUFFIX,tiles.nakarte.me
 
